@@ -94,19 +94,19 @@ p {
     margin: 15px; } }
 html body .navbar-default a.navbar-brand,
 html body .navbar-default .navbar-brand {
-  color: #444d54;
+  color: #e2e5e8;
   font-size: 16px;
   font-weight: 400; }
 
 .navbar-default {
-  background-color: #f2f4f5;
-  border-color: #e2e5e8; }
+  background-color: #2d3338;
+  border-color: #444d54; }
 
 .navbar-nav {
   float: right; }
 
 .navbar-default .navbar-nav > li.dropdown > a {
-  color: #444d54;
+  color: #e2e5e8;
   font-weight: 400; }
 
 .navbar-nav ul.dropdown-menu {
@@ -299,17 +299,36 @@ a.download-button:hover {
   width: 50%; }
 
 .cover-box-title {
+  margin: 20px;
   text-align: center; }
 
 h1.cover-box-title-headline,
 .cover-box-title-headline,
 h2.cover-box-title-subheadline,
 .cover-box-title-subheadline {
-  color: #2d3338;
+  color: #2d3338; }
+
+.cover-box-title-headline {
   font-family: "Roboto Slab", Georgia, serif; }
 
-.cover-box-image-featured {
+.cover-box-title-about {
+  color: #8e9aa3;
+  text-transform: uppercase; }
+
+.cover-box-title-subheadline {
+  color: #444d54;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%; }
+
+.cover-box-image {
+  margin-left: auto;
+  margin-right: auto;
   width: 90%; }
+
+.cover-box-image-featured {
+  width: 100%; }
 
 /* Introduction */
 

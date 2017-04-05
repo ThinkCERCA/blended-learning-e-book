@@ -128,14 +128,14 @@ p {
 
 html body .navbar-default a.navbar-brand,
 html body .navbar-default .navbar-brand {
-  color: $gray-7;
+  color: $gray-1;
   font-size: 16px;
   font-weight: 400;
 }
 
 .navbar-default {
-  background-color: $gray-0;
-  border-color: $gray-1;
+  background-color: $gray-8;
+  border-color: $gray-7;
 }
 
 .navbar-nav {
@@ -143,7 +143,7 @@ html body .navbar-default .navbar-brand {
 }
 
 .navbar-default .navbar-nav>li.dropdown > a {
-  color: $gray-7;
+  color: $gray-1;
   font-weight: 400;
 }
 
@@ -382,6 +382,7 @@ a.download-button:hover {
 }
 
 .cover-box-title {
+  margin: 20px;
   text-align: center;
 }
 
@@ -390,14 +391,33 @@ h1.cover-box-title-headline,
 h2.cover-box-title-subheadline,
 .cover-box-title-subheadline {
   color: $gray-8;
+}
+
+.cover-box-title-headline {
   font-family: "Roboto Slab", Georgia, serif;
 }
 
+.cover-box-title-about {
+  color: $gray-4;
+  text-transform: uppercase;
+}
+
+.cover-box-title-subheadline {
+  color: $gray-7;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
 .cover-box-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
 .cover-box-image-featured {
-  width: 90%;
+  width: 100%;
 }
 
 
