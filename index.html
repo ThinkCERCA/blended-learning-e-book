@@ -30,7 +30,9 @@
 			<h2 class="section-hed">Introduction</h2>
 		</div>
 		<div class="section-row">
-			{{ dummy_text }}
+			{% for row in introduction %}
+			<p>{{ row.paragraph_text|process_text }}</p>
+			{% endfor %}
 		</div>
 	</div>
 	<div class="section" id="training_support">
