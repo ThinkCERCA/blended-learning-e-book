@@ -365,19 +365,42 @@ a.download-button:hover {
     width: 100%;
 }
 
-/* About */
-.cover-title {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 80%;
+/* Cover */
+.cover.section {
+  background-color: $gray-1;
+  height: 500px;
+  padding: 0;
 }
 
-.subheadline {
-  font-style: italic;
+.cover-box {
+  display: inline-block;
+  float: left;
+  margin: 40px 0 0 0;
+  overflow: auto;
+  width: 50%;
 }
+
+.cover-box-title {
+  margin: 20px;
+  text-align: center;
+  padding: 30px 5px 5px 5px;
+}
+
+h1.cover-box-title-headline,
+.cover-box-title-headline,
+h2.cover-box-title-subheadline,
+.cover-box-title-subheadline {
+  color: $gray-8;
+  font-family: "Roboto Slab", Georgia, serif;
+}
+
+.cover-box-image {
+  padding: 15px 0 0 0;
+}
+
+.cover-box-image-featured {
+  width: 90%;
+}
+
 
 /* Introduction */
-.introduction-featured-image {
-  width: 100%;
-}

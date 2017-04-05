@@ -12,11 +12,17 @@
 	</aside>
 	#}
 	<div class="section cover" id="about">
-		<div class="cover-title">
-			<h1 class="cover-title-headline">{{ headline }}</h1>
-			<h2 class="cover-title-subheadline">{{ subheadline }}</h2>
+		<div class="cover-box">
+			<div class="cover-box-title">
+				<h1 class="cover-box-title-headline">{{ headline }}</h1>
+				<h2 class="cover-box-title-subheadline">{{ subheadline }}</h2>
+			</div>
 		</div>
-		<img class="introduction-featured-image" src="{{ featured_image }}">
+		<div class="cover-box">
+			<div class="cover-box-image">
+				<img class="cover-box-image-featured" src="{{ featured_image }}">
+			</div>
+		</div>
 	</div>
 	<div class="section" id="introduction">
 		<div class="section-row">
