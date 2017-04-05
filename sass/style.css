@@ -286,21 +286,20 @@ a.download-button:hover {
 
 /* Cover */
 .cover.section {
+  align-items: center;
   background-color: #e2e5e8;
+  display: flex;
   height: 500px;
   padding: 0; }
 
 .cover-box {
   display: inline-block;
   float: left;
-  margin: 40px 0 0 0;
   overflow: auto;
   width: 50%; }
 
 .cover-box-title {
-  margin: 20px;
-  text-align: center;
-  padding: 30px 5px 5px 5px; }
+  text-align: center; }
 
 h1.cover-box-title-headline,
 .cover-box-title-headline,
@@ -308,9 +307,6 @@ h2.cover-box-title-subheadline,
 .cover-box-title-subheadline {
   color: #2d3338;
   font-family: "Roboto Slab", Georgia, serif; }
-
-.cover-box-image {
-  padding: 15px 0 0 0; }
 
 .cover-box-image-featured {
   width: 90%; }
