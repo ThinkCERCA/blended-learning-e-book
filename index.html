@@ -1,14 +1,16 @@
 {% extends "_blueprint/_base.html" %}
 {% block content %}
 
-<div class="style-guide">
+<div class="ebook">
+	{# 
 	<aside class="index" id="#top">
 	    <ul>
 	    	{% for chapter in chapters %}
 	      		<li><a class="index-chapter" href="#{{ chapter.identifier }}">{{ chapter.chapter_title }}</a></li>
 	      	{% endfor %}
 	    </ul>   
-	  </aside>
+	</aside>
+	#}
 	<div class="section cover" id="about">
 		<div class="cover-title">
 			<h1 class="cover-title-headline">{{ headline }}</h1>
@@ -17,27 +19,43 @@
 		<img class="introduction-featured-image" src="{{ featured_image }}">
 	</div>
 	<div class="section" id="introduction">
-		<h2 class="section-hed">Introduction</h2>
 		<div class="section-row">
+			<h2 class="section-hed">Introduction</h2>
 		</div>
-	</div>	<div class="section" id="training_support">
-		<h2 class="section-hed">Training & Support</h2>
 		<div class="section-row">
+			{{ dummy_text }}
+		</div>
+	</div>
+	<div class="section" id="training_support">
+		<div class="section-row">
+			<h2 class="section-hed">Training & Support</h2>
+		</div>
+		<div class="section-row">
+			{{ dummy_text }}
 		</div>
 	</div>
 	<div class="section" id="processes">
-		<h2 class="section-hed">Processes</h2>
 		<div class="section-row">
+			<h2 class="section-hed">Processes</h2>
+		</div>
+		<div class="section-row">
+			{{ dummy_text }}
 		</div>
 	</div>
 	<div class="section" id="commitment_tools">
-		<h2 class="section-hed">Commitment to Technology & Helpful Tools</h2>
 		<div class="section-row">
+			<h2 class="section-hed">Commitment to Technology & Helpful Tools</h2>
+		</div>
+		<div class="section-row">
+			{{ dummy_text }}
 		</div>
 	</div>
 	<div class="section" id="scheduling_bandwidth">
-		<h2 class="section-hed">Scheduling & Bandwidth</h2>
 		<div class="section-row">
+			<h2 class="section-hed">Scheduling & Bandwidth</h2>
+		</div>
+		<div class="section-row">
+			{{ dummy_text }}
 		</div>
 	</div>
 </div>
