@@ -57,6 +57,8 @@ html body h4 {
 .base-gray {
   background-color: #5b6770; }
 
+/* Grays from lightest (0) to darkest (9) */
+/* base-gray */
 /* Overarching styles */
 .blog-title {
   color: #5b6770;
@@ -90,6 +92,27 @@ p {
 @media (max-width: 992px) {
   .ebook {
     margin: 15px; } }
+html body .navbar-default a.navbar-brand,
+html body .navbar-default .navbar-brand {
+  color: #444d54;
+  font-size: 16px;
+  font-weight: 400; }
+
+.navbar-default {
+  background-color: #f2f4f5;
+  border-color: #e2e5e8; }
+
+.navbar-nav {
+  float: right; }
+
+.navbar-default .navbar-nav > li.dropdown > a {
+  color: #444d54;
+  font-weight: 400; }
+
+.navbar-nav ul.dropdown-menu {
+  left: auto;
+  right: 0; }
+
 /* Index styles */
 @media (min-width: 993px) {
   .index {

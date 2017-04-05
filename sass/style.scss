@@ -70,6 +70,18 @@ $base-gray: #5b6770;
   background-color: $base-gray;
 }
 
+/* Grays from lightest (0) to darkest (9) */
+$gray-0: #f2f4f5;
+$gray-1: #e2e5e8;
+$gray-2: #c6ccd1;
+$gray-3: #aab3ba;
+$gray-4: #8e9aa3;
+$gray-5: #72818c;
+$gray-6: #5b6770; /* base-gray */
+$gray-7: #444d54;
+$gray-8: #2d3338;
+$gray-9: #16191c;
+
 /* Overarching styles */
 .blog-title {
   color: #5b6770;    
@@ -114,6 +126,31 @@ p {
   }
 }
 
+html body .navbar-default a.navbar-brand,
+html body .navbar-default .navbar-brand {
+  color: $gray-7;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.navbar-default {
+  background-color: $gray-0;
+  border-color: $gray-1;
+}
+
+.navbar-nav {
+  float: right;
+}
+
+.navbar-default .navbar-nav>li.dropdown > a {
+  color: $gray-7;
+  font-weight: 400;
+}
+
+.navbar-nav ul.dropdown-menu {
+  left: auto;
+  right: 0;
+}
 
 /* Index styles */
 @media (min-width: 993px) {
