@@ -38,10 +38,10 @@
 					{% if element.prepend %}<{{ element.prepend }} {% if element.prepend_class %}class="{{ element.prepend_class }}"{% endif %}>{% endif %}
 						{# <!-- SHOULD THE INNER-MOST ELEMENT BELOW BE ENCLOSED WITHIN ANOTHER ELEMENT? --> #}
 						{# <!-- FOR INSTANCE, IF THE INNER-MOST ELEMENT IS A `LI`, MAKE THE ENCLOSING ELEMENT AN `OL` OR `UL` --> #}
-						{% if element.enclose %}<{{ element.enclose }}>{% endif %}
+						{% if element.enclose %}<{{ element.enclose }} {% if element.enclose_class %}class="{{ element.enclose_class }}"{% endif %}>{% endif %}
 							{# <!-- THE ELEMENT AND ITS TEXT. PULLED FROM A SPREADSHEET CELL. --> #}
 							{# <!-- SUCH AS: A PARAGRAPH OR A BULLET POINT --> #}
-							<{{ element.tag }}>{{ element.text|process_text }}</{{ element.tag }}>
+							<{{ element.tag }} {% if element.tag_class %}class="{{ element.tag_class }}"{% endif %}>{{ element.text|process_text }}</{{ element.tag }}>
 						{% if element.enclose %}</{{ element.enclose }}>{% endif %}
 					{# <!-- SHOULD AN ELEMENT TAG FOLLOW THE ABOVE ELEMENT(S)? --> #}
 					{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT BELOW --> #}
