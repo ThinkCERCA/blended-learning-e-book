@@ -30,8 +30,8 @@
 			<h2 class="section-hed">Introduction</h2>
 		</div>
 		<div class="section-row">
-			{% for row in introduction %}
-			<p>{{ row.paragraph_text|process_text }}</p>
+			{% for paragraph in introduction %}
+				<p>{{ paragraph.paragraph_text|process_text }}</p>
 			{% endfor %}
 		</div>
 	</div>
@@ -40,7 +40,21 @@
 			<h2 class="section-hed">Training & Support</h2>
 		</div>
 		<div class="section-row">
-			{{ dummy_text }}
+			{% for element in training_support %}
+				{# <!-- SHOULD AN ELEMENT TAG PRECEDE THE BELOW ELEMENT(S)? --> #}
+				{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT --> #}
+				{% if element.prepend %}<{{ element.prepend }}>{% endif %}
+					{# <!-- SHOULD THE INNER-MOST ELEMENT BELOW BE ENCLOSED WITHIN ANOTHER ELEMENT? --> #}
+					{# <!-- FOR INSTANCE, IF THE INNER-MOST ELEMENT IS A `LI`, MAKE THE ENCLOSING ELEMENT AN `OL` OR `UL` --> #}
+					{% if element.enclose %}<{{ element.enclose }}>{% endif %}
+						{# <!-- THE ELEMENT AND ITS TEXT. PULLED FROM A SPREADSHEET CELL. --> #}
+						{# <!-- SUCH AS: A PARAGRAPH OR A BULLET POINT --> #}
+						<{{ element.tag }}>{{ element.text|process_text }}</{{ element.tag }}>
+					{% if element.enclose %}</{{ element.enclose }}>{% endif %}
+				{# <!-- SHOULD AN ELEMENT TAG FOLLOW THE ABOVE ELEMENT(S)? --> #}
+				{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT BELOW --> #}
+				{% if element.append %}</{{ element.append }}>{% endif %}
+			{% endfor %}
 		</div>
 	</div>
 	<div class="section" id="processes">

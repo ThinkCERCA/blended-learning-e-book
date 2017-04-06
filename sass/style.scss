@@ -1,4 +1,27 @@
 /* Screen sizes */
+/* Color values */
+$audience: #307fe2;
+.audience {
+  background-color: $audience;
+}
+
+$base-gray: #5b6770;
+.base-gray {
+  background-color: $base-gray;
+}
+
+/* Grays from lightest (0) to darkest (9) */
+$gray-0: #f2f4f5;
+$gray-1: #e2e5e8;
+$gray-2: #c6ccd1;
+$gray-3: #aab3ba;
+$gray-4: #8e9aa3;
+$gray-5: #72818c;
+$gray-6: #5b6770; /* base-gray */
+$gray-7: #444d54;
+$gray-8: #2d3338;
+$gray-9: #16191c;
+
 /* Default font styles */
 html body a,
 html body a:visited {
@@ -16,15 +39,13 @@ html body a:hover {
   background-color: #444d54;
 } 
 
-html body p, .p-hubspot {
-  color: #5b6770;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+html body p {
+  color: $gray-7;
   font-size: 16px;
   font-weight: normal;
   line-height: 26px;
   margin: 0 0 10px 0;
   text-size-adjust: 100%;
-  word-wrap: break-word;
   -webkit-font-smoothing:antialiased;
 }
 
@@ -60,28 +81,6 @@ html body h4 {
   padding: 1px 5px 1px 5px;
 }
 
-$audience: #307fe2;
-.audience {
-  background-color: $audience;
-}
-
-$base-gray: #5b6770;
-.base-gray {
-  background-color: $base-gray;
-}
-
-/* Grays from lightest (0) to darkest (9) */
-$gray-0: #f2f4f5;
-$gray-1: #e2e5e8;
-$gray-2: #c6ccd1;
-$gray-3: #aab3ba;
-$gray-4: #8e9aa3;
-$gray-5: #72818c;
-$gray-6: #5b6770; /* base-gray */
-$gray-7: #444d54;
-$gray-8: #2d3338;
-$gray-9: #16191c;
-
 /* Overarching styles */
 .blog-title {
   color: #5b6770;    
@@ -92,16 +91,15 @@ $gray-9: #16191c;
 
 html body {
   color: $base-gray;
-  font-family: "Roboto", Helvetica, Arial, sans-serif; }
-
-p {
-  color: $gray-7;
-  font-size: 1em;
-  font-weight: 400;
+  font-family: "Roboto", Helvetica, Arial, sans-serif; 
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1300px;
 }
 
 .ebook {
-  margin: 50px 0 0 0;
+  margin-top: 50px 0 0 0;
+  max-width: 1300px;
 }
 
 .desktop-chapter-navigation {
@@ -214,22 +212,22 @@ html body .index a:hover {
   padding: 30px 0 0 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .section {
     margin: 0 15px 30px 15px;
   }
 }
 
-.section-row {
-  overflow: auto; 
+.section-hed {
+  color: $gray-8;
+  font-family: "Roboto Slab", Georgia, serif;
 }
 
-@media (min-width: 993px) {
-  .section-row {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 680px;
-  } 
+.section-row {
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px; 
 }
 
 .section#about {
