@@ -175,6 +175,10 @@ html body .index a:hover {
   margin-right: auto;
   max-width: 640px; }
 
+.section-row-callout {
+  float: right;
+  width: 85%; }
+
 .section#about {
   border-top: none; }
 

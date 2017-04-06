@@ -43,7 +43,7 @@
 			{% for element in training_support %}
 				{# <!-- SHOULD AN ELEMENT TAG PRECEDE THE BELOW ELEMENT(S)? --> #}
 				{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT --> #}
-				{% if element.prepend %}<{{ element.prepend }}>{% endif %}
+				{% if element.prepend %}<{{ element.prepend }} {% if element.prepend_class %}class="{{ element.prepend_class }}"{% endif %}>{% endif %}
 					{# <!-- SHOULD THE INNER-MOST ELEMENT BELOW BE ENCLOSED WITHIN ANOTHER ELEMENT? --> #}
 					{# <!-- FOR INSTANCE, IF THE INNER-MOST ELEMENT IS A `LI`, MAKE THE ENCLOSING ELEMENT AN `OL` OR `UL` --> #}
 					{% if element.enclose %}<{{ element.enclose }}>{% endif %}
