@@ -22,14 +22,20 @@ html body a:hover {
 .shade-darker {
   background-color: #444d54; }
 
-html body p {
-  color: #444d54;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 26px;
-  margin: 0 0 10px 0;
-  text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased; }
+html body p,
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  clear: both;
+  display: block; }
+
+html body li {
+  font-size: 15px;
+  line-height: 24px;
+  margin: 10px; }
 
 html body h1 {
   color: #5b6770;
@@ -51,6 +57,15 @@ html body h3 {
 html body h4 {
   font-size: 18px;
   line-height: 28px; }
+
+html body p {
+  color: #444d54;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 26px;
+  margin: 0 0 10px 0;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased; }
 
 /* Default colors */
 .audience, .base-gray {
@@ -176,8 +191,13 @@ html body .index a:hover {
   max-width: 640px; }
 
 .section-row-callout {
+  background-color: #d5e5f8;
+  border-radius: 5px;
   float: right;
-  width: 85%; }
+  margin-right: 5%;
+  margin-bottom: 40px;
+  padding: 30px;
+  width: 80%; }
 
 .section#about {
   border-top: none; }

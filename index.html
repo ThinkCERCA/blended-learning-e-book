@@ -25,62 +25,31 @@
 			</div>
 		</div>
 	</div>
-	<div class="section" id="introduction">
-		<div class="section-row">
-			<h2 class="section-hed">Introduction</h2>
+	{% for chapter in chapters %} 
+	{% set var_chapter = chapter.identifier %}
+		<div class="section" id="{{ var_chapter }}">	
+			<div class="section-row">
+				<h2 class="section-hed">{% for chapter in chapters if chapter.identifier == var_chapter %}{{ chapter.chapter_title }}{% endfor %}</h2>
+			</div>
+			<div class="section-row">
+				{% for element in content if element.chapter == var_chapter %}
+					{# <!-- SHOULD AN ELEMENT TAG PRECEDE THE BELOW ELEMENT(S)? --> #}
+					{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT --> #}
+					{% if element.prepend %}<{{ element.prepend }} {% if element.prepend_class %}class="{{ element.prepend_class }}"{% endif %}>{% endif %}
+						{# <!-- SHOULD THE INNER-MOST ELEMENT BELOW BE ENCLOSED WITHIN ANOTHER ELEMENT? --> #}
+						{# <!-- FOR INSTANCE, IF THE INNER-MOST ELEMENT IS A `LI`, MAKE THE ENCLOSING ELEMENT AN `OL` OR `UL` --> #}
+						{% if element.enclose %}<{{ element.enclose }}>{% endif %}
+							{# <!-- THE ELEMENT AND ITS TEXT. PULLED FROM A SPREADSHEET CELL. --> #}
+							{# <!-- SUCH AS: A PARAGRAPH OR A BULLET POINT --> #}
+							<{{ element.tag }}>{{ element.text|process_text }}</{{ element.tag }}>
+						{% if element.enclose %}</{{ element.enclose }}>{% endif %}
+					{# <!-- SHOULD AN ELEMENT TAG FOLLOW THE ABOVE ELEMENT(S)? --> #}
+					{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT BELOW --> #}
+					{% if element.append %}</{{ element.append }}>{% endif %}
+				{% endfor %}
+			</div>
 		</div>
-		<div class="section-row">
-			{% for paragraph in introduction %}
-				<p>{{ paragraph.paragraph_text|process_text }}</p>
-			{% endfor %}
-		</div>
-	</div>
-	<div class="section" id="training_support">
-		<div class="section-row">
-			<h2 class="section-hed">Training & Support</h2>
-		</div>
-		<div class="section-row">
-			{% for element in training_support %}
-				{# <!-- SHOULD AN ELEMENT TAG PRECEDE THE BELOW ELEMENT(S)? --> #}
-				{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT --> #}
-				{% if element.prepend %}<{{ element.prepend }} {% if element.prepend_class %}class="{{ element.prepend_class }}"{% endif %}>{% endif %}
-					{# <!-- SHOULD THE INNER-MOST ELEMENT BELOW BE ENCLOSED WITHIN ANOTHER ELEMENT? --> #}
-					{# <!-- FOR INSTANCE, IF THE INNER-MOST ELEMENT IS A `LI`, MAKE THE ENCLOSING ELEMENT AN `OL` OR `UL` --> #}
-					{% if element.enclose %}<{{ element.enclose }}>{% endif %}
-						{# <!-- THE ELEMENT AND ITS TEXT. PULLED FROM A SPREADSHEET CELL. --> #}
-						{# <!-- SUCH AS: A PARAGRAPH OR A BULLET POINT --> #}
-						<{{ element.tag }}>{{ element.text|process_text }}</{{ element.tag }}>
-					{% if element.enclose %}</{{ element.enclose }}>{% endif %}
-				{# <!-- SHOULD AN ELEMENT TAG FOLLOW THE ABOVE ELEMENT(S)? --> #}
-				{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT BELOW --> #}
-				{% if element.append %}</{{ element.append }}>{% endif %}
-			{% endfor %}
-		</div>
-	</div>
-	<div class="section" id="processes">
-		<div class="section-row">
-			<h2 class="section-hed">Processes</h2>
-		</div>
-		<div class="section-row">
-			{{ dummy_text }}
-		</div>
-	</div>
-	<div class="section" id="commitment_tools">
-		<div class="section-row">
-			<h2 class="section-hed">Commitment to Technology & Helpful Tools</h2>
-		</div>
-		<div class="section-row">
-			{{ dummy_text }}
-		</div>
-	</div>
-	<div class="section" id="scheduling_bandwidth">
-		<div class="section-row">
-			<h2 class="section-hed">Scheduling & Bandwidth</h2>
-		</div>
-		<div class="section-row">
-			{{ dummy_text }}
-		</div>
-	</div>
+	{% endfor %}
 </div>
 
 {% endblock content %}
