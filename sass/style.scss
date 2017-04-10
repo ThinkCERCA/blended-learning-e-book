@@ -2,9 +2,10 @@
 /* Color values */
 
 /* Color scheme from lightest to darkest */
-$light-accent-0: #cdf0f2; /* light teal */
-$light-accent-1: #a0d597; /* light green */
-$light-accent-2: #83dadd; /* light teal */
+$light-accent-0: #e6f7f8; /* light teal */
+$light-accent-1: #cdf0f2; /* light teal */
+$light-accent-2: #a0d597; /* light green */
+$light-accent-3: #83dadd; /* light teal */
 $base-color: #00b7bd; /* teal */
 $dark-accent-0: #2f939c; /* dark teal */
 $dark-accent-1: #2d3338; /* base-gray and gray-8 */
@@ -45,8 +46,16 @@ html body h4,
 html body h5,
 html body h6 {
   color: $base-gray;
-  clear: both;
   display: block;
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  clear: both;
 }
 
 .section-row li {
@@ -240,20 +249,71 @@ html body .index a:hover {
 }
 
 .section-row {
-  overflow: auto;
+  overflow: initial;
   margin-left: auto;
   margin-right: auto;
   max-width: 640px; 
 }
 
 .section-row-callout {
-  background-color: $gray-0;
+  background-color: $light-accent-0;
   border-radius: 5px;
   float: right;
   margin-right: 5%;
   margin-bottom: 40px;
   padding: 30px;
   width: 80%;
+}
+
+.section-row-cta {
+  background-color: $light-accent-0;
+  border: 1px solid $light-accent-1;
+  border-radius: 5px;
+  color: $dark-accent-1;
+  padding: 15px;
+}
+
+.cta-small {
+  width: 200px;
+}
+
+.cta-medium {
+  width: 320px;
+}
+
+.cta-large {
+  width: 400px;
+}
+
+.cta-left {
+  float: left;
+  margin: 20px 20px 20px -140px;
+}
+
+.cta-right {
+  float: right;
+  margin: 20px -140px 20px 20px;
+}
+
+@media (max-width: 964px) {
+  .cta-large,
+  .cta-large.cta-left,
+  .cta-large.cta-right,
+  .cta-medium,
+  .cta-medium.cta-left,
+  .cta-medium.cta-right {
+    width: 90%;
+    margin: 5%;
+  }
+  .cta-small,
+  .cta-small.cta-left {
+    width: 46%;
+    margin: 2% 4% 2% 2%;
+  }
+  .cta-small.cta-right {
+    width: 46%;
+    margin: 2% 2% 2% 4%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -448,7 +508,7 @@ a.download-button:hover {
 }
 
 .cover-box-title-about {
-  color: $light-accent-1;
+  color: $light-accent-2;
   margin: 0 0 30px 0;
   text-transform: uppercase;
 }

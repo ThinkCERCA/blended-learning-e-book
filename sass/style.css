@@ -2,6 +2,7 @@
 /* Color values */
 /* Color scheme from lightest to darkest */
 /* light teal */
+/* light teal */
 /* light green */
 /* light teal */
 /* teal */
@@ -30,8 +31,15 @@ html body h4,
 html body h5,
 html body h6 {
   color: #2d3338;
-  clear: both;
   display: block; }
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  clear: both; }
 
 .section-row li {
   font-size: 15px;
@@ -186,13 +194,13 @@ html body .index a:hover {
   font-family: "Roboto Slab", Georgia, serif; }
 
 .section-row {
-  overflow: auto;
+  overflow: initial;
   margin-left: auto;
   margin-right: auto;
   max-width: 640px; }
 
 .section-row-callout {
-  background-color: #f2f4f5;
+  background-color: #e6f7f8;
   border-radius: 5px;
   float: right;
   margin-right: 5%;
@@ -200,6 +208,48 @@ html body .index a:hover {
   padding: 30px;
   width: 80%; }
 
+.section-row-cta {
+  background-color: #e6f7f8;
+  border: 1px solid #cdf0f2;
+  border-radius: 5px;
+  color: #2d3338;
+  padding: 15px; }
+
+.cta-small {
+  width: 200px; }
+
+.cta-medium {
+  width: 320px; }
+
+.cta-large {
+  width: 400px; }
+
+.cta-left {
+  float: left;
+  margin: 20px 20px 20px -140px; }
+
+.cta-right {
+  float: right;
+  margin: 20px -140px 20px 20px; }
+
+@media (max-width: 964px) {
+  .cta-large,
+  .cta-large.cta-left,
+  .cta-large.cta-right,
+  .cta-medium,
+  .cta-medium.cta-left,
+  .cta-medium.cta-right {
+    width: 90%;
+    margin: 5%; }
+
+  .cta-small,
+  .cta-small.cta-left {
+    width: 46%;
+    margin: 2% 4% 2% 2%; }
+
+  .cta-small.cta-right {
+    width: 46%;
+    margin: 2% 2% 2% 4%; } }
 @media (max-width: 767px) {
   .section-row-callout {
     float: right;
