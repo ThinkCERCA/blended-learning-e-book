@@ -271,6 +271,8 @@ html body .index a:hover {
   border: 1px solid $light-accent-1;
   border-radius: 5px;
   color: $dark-accent-1;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 15px;
 }
 
@@ -284,6 +286,54 @@ html body .index a:hover {
 
 .cta-large {
   width: 400px;
+}
+
+.cta-across {
+  width: 190%;
+  margin-top: 20px;
+  margin-right: -45%;
+  margin-bottom: 20px;
+  margin-left: -45%;
+}
+
+@media (max-width: 1259px) {
+  .cta-across {
+    width: 180%;
+    margin-right: -40%;
+    margin-left: -40%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cta-across {
+    width: 170%;
+    margin-right: -35%;
+    margin-left: -35%;
+  }
+}
+
+@media (max-width: 1139px) {
+  .cta-across {
+    width: 160%;
+    margin-right: -30%;
+    margin-left: -30%;
+  }
+}
+
+@media (max-width: 1069px) {
+  .cta-across {
+    width: 150%;
+    margin-right: -25%;
+    margin-left: -25%;
+  }
+}
+
+@media (max-width: 1001px) {
+  .cta-across {
+    width: 140%;
+    margin-right: -20%;
+    margin-left: -20%;
+  }
 }
 
 .cta-left {
@@ -302,7 +352,8 @@ html body .index a:hover {
   .cta-large.cta-right,
   .cta-medium,
   .cta-medium.cta-left,
-  .cta-medium.cta-right {
+  .cta-medium.cta-right,
+  .cta-across {
     width: 90%;
     margin: 5%;
   }
