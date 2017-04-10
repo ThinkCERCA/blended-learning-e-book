@@ -273,7 +273,24 @@ html body .index a:hover {
   color: $dark-accent-1;
   margin-top: 20px;
   margin-bottom: 20px;
+  overflow: auto;
   padding: 15px;
+  -webkit-transition: all ease-in-out 0.4s; /* Safari */
+  transition: all ease-in-out 0.4s;
+  h4 {
+    text-transform: uppercase;
+  }
+  img {
+    width: 100%;
+    margin: 10px 0 20px 0;
+  }
+}
+
+a.section-row-cta:hover,
+a .section-row-cta:hover {
+  background-color: $light-accent-1;
+  -webkit-transition: all ease-in-out 0.4s; /* Safari */
+  transition: all ease-in-out 0.4s;
 }
 
 .cta-small {
@@ -294,6 +311,7 @@ html body .index a:hover {
   margin-right: -45%;
   margin-bottom: 20px;
   margin-left: -45%;
+  text-align: center;
 }
 
 @media (max-width: 1259px) {
