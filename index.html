@@ -4,14 +4,17 @@
 	<div class="section cover" id="about">
 		<div class="cover-box">
 			<div class="cover-box-title">
-				<h5 class="cover-box-title-about">{{ about }}</h5>
-				<h1 class="cover-box-title-headline">{{ headline }}</h1>
-				<h3 class="cover-box-title-subheadline">{{ subheadline }}</h3>
+				<h5 class="cover-box-title-about">{{ about|process_text }}</h5>
+				<h1 class="cover-box-title-headline">{{ headline|process_text }}</h1>
+				<h3 class="cover-box-title-subheadline">{{ subheadline|process_text }}</h3>
 			</div>
 		</div>
 		<div class="cover-box">
 			<div class="cover-box-image">
-				<img class="cover-box-image-featured" src="{{ featured_image }}">
+				{# <!-- <img class="cover-box-image-featured" src="{{ featured_image }}"> --> #}
+				<video autoplay="autoplay" loop="loop" width="100%">
+					<source src="img/blended_learning_thinkcerca_ebook.mov">
+				</video>
 			</div>
 		</div>
 	</div>
