@@ -278,11 +278,14 @@ html body .index a:hover {
   -webkit-transition: all ease-in-out 0.4s; /* Safari */
   transition: all ease-in-out 0.4s;
   h4 {
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
   img {
     width: 100%;
     margin: 10px 0 20px 0;
+  }
+  i {
+    color: $dark-accent-0;
   }
 }
 
@@ -451,7 +454,6 @@ a .section-row-cta:hover {
     width: 100%;
   }
 }
-
 
 .section-row-box.one-color {
   float: left; }

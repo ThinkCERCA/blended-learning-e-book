@@ -221,11 +221,11 @@ html body .index a:hover {
   -webkit-transition: all ease-in-out 0.4s;
   /* Safari */
   transition: all ease-in-out 0.4s; }
-  .section-row-cta h4 {
-    text-transform: uppercase; }
   .section-row-cta img {
     width: 100%;
     margin: 10px 0 20px 0; }
+  .section-row-cta i {
+    color: #2f939c; }
 
 a.section-row-cta:hover,
 a .section-row-cta:hover {
