@@ -85,7 +85,7 @@ html body h3 {
 }
 
 html body h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 22px;
 }
@@ -574,9 +574,8 @@ a.download-button:hover {
   align-items: center;
   background-color: #3d9ea6;
   display: flex;
-  height: 400px;
-  margin: 50px 0 30px 0;
-  padding: 0;
+  margin: 50px 0 0 0;
+  padding: 40px 0 60px 0;
 }
 
 .cover-box {
@@ -610,7 +609,7 @@ a.download-button:hover {
 
 .cover-box-title-about {
   color: $light-accent-2;
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 0;
   text-transform: uppercase;
 }
 
@@ -625,12 +624,18 @@ h1.cover-box-title-headline,
   font-style: italic;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
   width: 80%;
+}
+
+.cover-box-title-presented {
+  color: $dark-accent-1;
+  margin: 10px 0 10px 0;
 }
 
 .cover-box-title-authors {
   color: $dark-accent-1;
-  margin: 20px 0;
+  margin: 10px 0 10px 0;
 }
 
 .cover-box-image {
@@ -643,38 +648,60 @@ h1.cover-box-title-headline,
   width: 100%;
 }
 
+/* About */
+.about.section {
+  background-color: $gray-0;
+  border: none;
+  margin: 0 0 30px 0;
+  padding: 20px;
+  text-align: center;
+  h4 {
+    color: $dark-accent-1;
+  }
+}
+
+.about-social {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.about-social a:hover {
+  .about-social-share {
+    background-color: $base-color;
+  }
+}
+
+.about-social-share {
+  align-items: center;
+  background-color: $light-accent-2;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin: 10px 30px 10px 30px;
+  padding: 5px 20px 5px 20px;
+  width: 100px;
+  -webkit-transition: all ease-in-out 0.4s; /* Safari */
+  transition: all ease-in-out 0.4s;
+  i {
+    color: #ffffff;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-social-share {
+    border-radius: 100%;
+    height: 50px;
+    margin: 5px 10px;
+    padding: 5px;
+    width: 50px;
+  }
+}
 
 /* Introduction */
 .section#introduction {
   border-top: none;
 }
-
-.author {
-  h4 {
-    color: $base-color;
-  }
-  h5 {
-    color: $dark-accent-0;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  padding: 10px;
-  text-align: center;
-  img {
-    border-radius: 100%;
-    margin: 0 0 10px 0;
-    width: 80%;
-  }
-}
-
-.author-about {
-  border-radius: 5px;
-  margin: 20px 0 30px 0;
-  padding: 0 20px 0 20px;
-}
-
-
-
-
-
-

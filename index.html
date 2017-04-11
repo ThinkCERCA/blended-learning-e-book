@@ -1,13 +1,15 @@
 {% extends "_blueprint/_base.html" %}
 {% block content %}
 <div class="ebook">
-	<div class="section cover" id="about">
+	<div class="section cover">
 		<div class="cover-box">
 			<div class="cover-box-title">
 				<h5 class="cover-box-title-about">{{ about|process_text }}</h5>
 				<h1 class="cover-box-title-headline">{{ headline|process_text }}</h1>
 				<h3 class="cover-box-title-subheadline">{{ subheadline|process_text }}</h3>
+				<h5 class="cover-box-title-presented">{{ presented|process_text }}</h5>
 				<h5 class="cover-box-title-authors">{{ authors|process_text }}</h5>
+
 			</div>
 		</div>
 		<div class="cover-box">
@@ -17,6 +19,26 @@
 					<source src="img/blended_learning_thinkcerca_ebook.mov">
 				</video>
 			</div>
+		</div>
+	</div>
+	<div class="section about">
+		<h4>{{ share_this }}</h4>
+		<div class="about-social">
+			<a href="mailto:">
+				<div class="about-social-share">
+					<i class="material-icons">email</i>
+				</div>
+			</a>
+			<a href="">
+				<div class="about-social-share">
+					<i class="fa fa-facebook-official" aria-hidden="true"></i>
+				</div>
+			</a>
+			<a href="">
+				<div class="about-social-share">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+				</div>
+			</a>
 		</div>
 	</div>
 	{% for chapter in chapters %} 
