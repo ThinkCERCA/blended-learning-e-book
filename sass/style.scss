@@ -86,7 +86,8 @@ html body h3 {
 
 html body h4 {
   font-size: 18px;
-  line-height: 28px;
+  font-weight: 400;
+  line-height: 22px;
 }
 
 html body p {
@@ -94,7 +95,7 @@ html body p {
   font-size: 16px;
   font-weight: normal;
   line-height: 26px;
-  margin: 0 0 10px 0;
+  margin: 0 0 30px 0;
   text-size-adjust: 100%;
   -webkit-font-smoothing:antialiased;
 }
@@ -647,3 +648,33 @@ h1.cover-box-title-headline,
 .section#introduction {
   border-top: none;
 }
+
+.author {
+  h4 {
+    color: $base-color;
+  }
+  h5 {
+    color: $dark-accent-0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  padding: 10px;
+  text-align: center;
+  img {
+    border-radius: 100%;
+    margin: 0 0 10px 0;
+    width: 80%;
+  }
+}
+
+.author-about {
+  border-radius: 5px;
+  margin: 20px 0 30px 0;
+  padding: 0 20px 0 20px;
+}
+
+
+
+
+
+
