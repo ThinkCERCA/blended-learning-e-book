@@ -78,6 +78,20 @@ html body p {
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased; }
 
+/* footer */
+footer {
+  margin: 80px 0 0 0; }
+
+.authors {
+  background-color: #f2f4f5;
+  height: 160px;
+  margin: 0; }
+
+.credits {
+  background-color: #2f939c;
+  height: 40px;
+  margin: 0; }
+
 /* Default colors */
 .audience, .base-gray {
   border-radius: 4px;
@@ -228,6 +242,8 @@ html body .index a:hover {
     margin: 10px 0 20px 0; }
   .section-row-cta i {
     color: #00b7bd; }
+  .section-row-cta p {
+    margin: 10px 0 10px 0; }
 
 a.section-row-cta:hover,
 a .section-row-cta:hover {
