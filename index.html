@@ -43,7 +43,7 @@
 	</div>
 	{% for chapter in chapters %} 
 	{% set var_chapter = chapter.identifier %}
-		<div class="section" id="{{ var_chapter }}">	
+		<div class="section" id="{{ var_chapter }}">
 			<div class="section-row">
 				<h2 class="section-hed">{% for chapter in chapters if chapter.identifier == var_chapter %}{{ chapter.chapter_title }}{% endfor %}</h2>
 			</div>
@@ -64,6 +64,7 @@
 					{% if element.append %}</{{ element.append }}>{% endif %}
 				{% endfor %}
 			</div>
+			<hr>
 		</div>
 	{% endfor %}
 </div>
