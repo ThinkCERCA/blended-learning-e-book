@@ -33,7 +33,9 @@ html body a:visited {
   text-decoration: none;
 }
 
-html body a:hover {
+html body a:hover,
+.section-row-cta a i:hover,
+.section-row-cta i a:hover {
   color: $dark-accent-0;
   text-decoration: none;
 }
@@ -610,27 +612,27 @@ h1.cover-box-title-headline,
 
 /* footer */
 footer {
-  margin: 80px 0 0 0;
+  margin: 120px 0 0 0;
 }
 
 .authors {
   background-color: $gray-0;
   float: left;
-  margin: 0;
+  margin: -50px 0 0 0;
   overflow: auto;
-  padding: 0 0 40px 0;
+  padding: 50px 0 40px 0;
 }
 
 .authors-hed {
-  background-color: $gray-1;
   margin: 0;
   overflow: auto;
-  padding: 20px;
   text-align: center;
   width: 100%;
   h2 {
-    color: $dark-accent-0;
+    border-bottom: 3px solid $gray-1;
+    color: $dark-accent-1;
     font-family: "Roboto Slab", Georgia, sans-serif;
+    padding: 0 0 12px 0;
   }
 }
 

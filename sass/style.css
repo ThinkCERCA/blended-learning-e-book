@@ -20,7 +20,9 @@ html body a:visited {
   font-weight: 600;
   text-decoration: none; }
 
-html body a:hover {
+html body a:hover,
+.section-row-cta a i:hover,
+.section-row-cta i a:hover {
   color: #2f939c;
   text-decoration: none; }
 
@@ -473,25 +475,25 @@ h1.cover-box-title-headline,
 
 /* footer */
 footer {
-  margin: 80px 0 0 0; }
+  margin: 120px 0 0 0; }
 
 .authors {
   background-color: #f2f4f5;
   float: left;
-  margin: 0;
+  margin: -50px 0 0 0;
   overflow: auto;
-  padding: 0 0 40px 0; }
+  padding: 50px 0 40px 0; }
 
 .authors-hed {
-  background-color: #e2e5e8;
   margin: 0;
   overflow: auto;
-  padding: 20px;
   text-align: center;
   width: 100%; }
   .authors-hed h2 {
-    color: #2f939c;
-    font-family: "Roboto Slab", Georgia, sans-serif; }
+    border-bottom: 3px solid #e2e5e8;
+    color: #444d54;
+    font-family: "Roboto Slab", Georgia, sans-serif;
+    padding: 0 0 12px 0; }
 
 .authors-about {
   display: inline-block;
