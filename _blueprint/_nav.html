@@ -18,6 +18,7 @@
         {% for chapter in chapters %}
           <li><a href="#{{ chapter.identifier }}">{{ chapter.chapter_title }}</a></li>
         {% endfor %}
+          <li><a href="#authors">About the Authors</a></li>
         </ul>
         <ul class="nav navbar-nav desktop-chapter-navigation">
         <li class="dropdown">
@@ -26,6 +27,7 @@
             {% for chapter in chapters %}
               <li><a href="#{{ chapter.identifier }}">{{ chapter.chapter_title }}</a></li>
             {% endfor %}
+              <li><a href="#authors">About the Authors</a></li>
           </ul>
         </li>
       </ul>

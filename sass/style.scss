@@ -90,14 +90,32 @@ html body h4 {
   line-height: 22px;
 }
 
+html body h5 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
 html body p {
   color: $gray-7;
   font-size: 16px;
   font-weight: normal;
   line-height: 26px;
-  margin: 0 0 30px 0;
   text-size-adjust: 100%;
   -webkit-font-smoothing:antialiased;
+}
+
+html body p {
+  margin: 30px 0 30px 0;
+}
+
+html body p:last-of-type {
+  margin-bottom: 10px;
+}
+
+html body p:first-of-type {
+  margin-top: 20px;
 }
 
 /* Overarching styles */
@@ -118,6 +136,10 @@ html body {
   .ebook {
     margin: 50px 0 0 0;
   }
+}
+
+img {
+  border-radius: 5px;
 }
 
 /* Navigation styles */
@@ -234,23 +256,6 @@ html body .navbar-default .navbar-toggle .icon-bar {
   }
 }
 
-/* footer */
-footer {
-  margin: 80px 0 0 0;
-}
-
-.authors {
-  background-color: $gray-0;
-  height: 160px;
-  margin: 0;
-}
-
-.credits {
-  background-color: $dark-accent-0;
-  height: 40px;
-  margin: 0;
-}
-
 /* Section styles */
 .section {
   display: block; 
@@ -276,6 +281,10 @@ footer {
   font-family: "Roboto Slab", Georgia, serif;
 }
 
+.section img {
+  width: 100%;
+}
+
 .section-row {
   overflow: initial;
   margin-left: auto;
@@ -287,12 +296,25 @@ footer {
   background-color: $light-accent-0;
   border-radius: 5px;
   float: right;
-  margin-left: 15%;
+  margin-top: 30px;
   margin-right: 5%;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  margin-left: 15%;
   padding: 30px;
   width: 80%;
 }
+
+@media (max-width: 767px) {
+  .section-row-callout {
+    clear: both;
+    float: left;
+    margin: 20px 0 20px 0;
+    padding: 10px 10px 10px 20px;
+    width: 100%;
+  }
+}
+
+/* Section CTAs */
 
 .section-row-cta {
   background-color: $light-accent-0;
@@ -447,16 +469,6 @@ a .section-row-cta:hover {
   }
 }
 
-@media (max-width: 767px) {
-  .section-row-callout {
-    clear: both;
-    float: left;
-    margin: 20px 0 20px 0;
-    padding: 10px 10px 10px 20px;
-    width: 100%;
-  }
-}
-
 /* Cover */
 .cover.section {
   align-items: center;
@@ -594,4 +606,103 @@ h1.cover-box-title-headline,
   hr {
     display: none;
   }
+}
+
+/* footer */
+footer {
+  margin: 80px 0 0 0;
+}
+
+.authors {
+  background-color: $gray-0;
+  float: left;
+  margin: 0;
+  overflow: auto;
+  padding: 0 0 40px 0;
+}
+
+.authors-hed {
+  background-color: $gray-1;
+  margin: 0;
+  overflow: auto;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  h2 {
+    color: $dark-accent-0;
+    font-family: "Roboto Slab", Georgia, sans-serif;
+  }
+}
+
+.authors-about {
+  display: inline-block;
+  float: left;
+  padding: 20px 30px 20px 30px;
+  width: 50%;
+}
+
+.authors-about-image {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  width: 30%;
+  img {
+    border-radius: 100%;
+    margin: 20px 0 0 0;
+    max-width: 200px;
+    width: 100%;
+  }
+}
+
+.authors-about-text {
+  display: inline-block;
+  float: left;
+  margin: 0 0 0 5%;
+  width: 65%;
+  p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 992px) {
+  .authors-about-image,
+  .authors-about-text {
+    display: block;
+    width: 100%;
+  }
+  .authors-about-text {
+    margin: 0;
+  }
+  .authors-about-text h3,
+  .authors-about-text h4 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .authors-about {
+    display: block;
+    float: left;
+    width: 100%;
+  }
+  .authors-about-image,
+  .authors-about-text {
+    display: block;
+    width: 100%;
+  }
+  .authors-about-text h3,
+  .authors-about-text h4 {
+    text-align: center;
+  }
+}
+
+.credits {
+  background-color: $dark-accent-0;
+  float: left;
+  height: 40px;
+  margin: 0;
+  overflow: auto;
+  text-align: center;
+  width: 100%;
 }

@@ -1,4 +1,20 @@
 <footer>
-	<div class="authors" id="#authors"></div>
-	<div class="credits"></div>
+	<div class="authors" id="authors">
+		<div class="authors-hed">
+			<h2>About the Authors</h2>
+		</div>
+		{% for author in authors %}
+		<div class="authors-about">
+			<div class="authors-about-image">
+				<img src="{{ author.image }}">
+			</div>
+			<div class="authors-about-text">
+				<h3>{{ author.name }}</h3>
+				<h4>{{ author.title }}</h4>
+				<p>{{ author.bio }}</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="credits" id="credits"></div>
 </footer>
