@@ -141,6 +141,26 @@ html body .navbar-default .navbar-brand {
   html body .navbar-default a.navbar-brand,
   html body .navbar-default .navbar-brand {
     max-width: 250px; } }
+html body .navbar-default .navbar-brand:hover,
+html body .navbar-default .navbar-brand:focus {
+  color: #ffffff; }
+
+html body .dropdown-menu > li > a {
+  color: #00b7bd; }
+
+html body .dropdown-menu > li > a:hover {
+  color: #2f939c; }
+
+html body .dropdown-menu > li > a:hover,
+html body .dropdown-menu > li > a:focus {
+  background-color: #f2f4f5; }
+
+html body .navbar-default .navbar-nav > .open > a,
+html body .navbar-default .navbar-nav > .open > a:hover,
+html body .navbar-default .navbar-nav > .open > a:focus {
+  background-color: #5b6770;
+  color: #ffffff; }
+
 .navbar-default {
   background-color: #444d54;
   border-color: #444d54; }
@@ -149,7 +169,7 @@ html body .navbar-default .navbar-brand {
   float: right; }
 
 .navbar-default .navbar-nav > li.dropdown > a {
-  color: #e2e5e8;
+  color: #ffffff;
   font-weight: 400; }
 
 .navbar-nav ul.dropdown-menu {

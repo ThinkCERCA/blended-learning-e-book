@@ -182,6 +182,31 @@ html body .navbar-default .navbar-brand {
   }
 }
 
+html body .navbar-default .navbar-brand:hover, 
+html body .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+
+html body .dropdown-menu>li>a {
+  color: $base-color;
+}
+
+html body .dropdown-menu>li>a:hover {
+  color: $dark-accent-0;
+}
+
+html body .dropdown-menu>li>a:hover, 
+html body .dropdown-menu>li>a:focus {
+  background-color: $gray-0;
+}
+
+html body .navbar-default .navbar-nav>.open>a, 
+html body .navbar-default .navbar-nav>.open>a:hover, 
+html body .navbar-default .navbar-nav>.open>a:focus {
+  background-color: $gray-6;
+  color: #ffffff;
+}
+
 .navbar-default {
   background-color: $gray-7;
   border-color: $gray-7;
@@ -192,7 +217,7 @@ html body .navbar-default .navbar-brand {
 }
 
 .navbar-default .navbar-nav>li.dropdown > a {
-  color: $gray-1;
+  color: #ffffff;
   font-weight: 400;
 }
 
