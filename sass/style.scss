@@ -95,6 +95,7 @@ html body h4 {
 html body h5 {
   font-size: 14px;
   font-weight: 600;
+  letter-spacing: 2px;
   line-height: 20px;
   text-transform: uppercase;
 }
@@ -129,6 +130,10 @@ html body {
   max-width: 1300px;
 }
 
+blockquote {
+  overflow: auto;
+}
+
 .ebook {
   margin-top: 50px 0 0 0;
   max-width: 1300px;
@@ -142,6 +147,23 @@ html body {
 
 img {
   border-radius: 5px;
+}
+
+.sign-up {
+  background-color: $base-color;
+  border: none; 
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 13px 23px;
+  text-align: center;
+  transition: all ease-in-out .4s;
+}
+
+.sign-up:hover {
+  background-color: $light-accent-0;
+  color: $base-color;
 }
 
 /* Navigation styles */
@@ -372,6 +394,12 @@ a .section-row-cta:hover {
   text-align: center;
 }
 
+.cta-across-text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
 @media (max-width: 1259px) {
   .cta-across {
     width: 180%;
@@ -414,38 +442,79 @@ a .section-row-cta:hover {
 
 .cta-left {
   float: left;
-  margin: 20px 20px 20px -260px;
+  margin: 20px 40px 20px -260px;
 }
 
 .cta-right {
   float: right;
-  margin: 20px -260px 20px 20px;
+  margin: 20px -260px 20px 40px;
+}
+
+.inline-image {
+  height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  clear: none;
+  overflow: auto;
+}
+
+html body .cta-dark-background {
+  background-color: $dark-accent-0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  color: #ffffff;
+  clear: none;
+  margin-top: 40px;
+  overflow: auto;
+  h1, h2, h3, h4, p {
+    color: #ffffff;
+  }
+  h5 {
+    color: $light-accent-2;
+  }
+  h2 {
+    font-family: "Roboto Slab", Georgia, sans-serif;
+    color: #ffffff;
+  }
+  h5 {
+    letter-spacing: 3px;
+  }
+  h2, p {
+    margin: 30px 0 30px 0;
+  }
+  .cta-across-text {
+    padding: 20px 0 20px 0;
+  }
 }
 
 @media (max-width: 1239px) {
   .cta-left {
-    margin: 20px 20px 20px -230px;
+    margin: 20px 40px 20px -230px;
   }
   .cta-right {
-    margin: 20px -230px 20px 20px;
+    margin: 20px -230px 20px 40px;
   }
 }
 
 @media (max-width: 1169px) {
   .cta-left {
-    margin: 20px 20px 20px -190px;
+    margin: 20px 40px 20px -190px;
   }
   .cta-right {
-    margin: 20px -190px 20px 20px;
+    margin: 20px -190px 20px 40px;
   }
 }
 
 @media (max-width: 1069px) {
   .cta-left {
-    margin: 20px 20px 20px -140px;
+    margin: 20px 40px 20px -140px;
   }
   .cta-right {
-    margin: 20px -140px 20px 20px;
+    margin: 20px -140px 40px 20px;
   }
 }
 
@@ -474,7 +543,7 @@ a .section-row-cta:hover {
 /* Cover */
 .cover.section {
   align-items: center;
-  background-color: #3d9ea6;
+  background-color: $dark-accent-0;
   display: flex;
   margin: 50px 0 0 0;
   padding: 40px 0 60px 0;
@@ -531,12 +600,12 @@ h1.cover-box-title-headline,
 }
 
 .cover-box-title-presented {
-  color: $dark-accent-1;
+  color: $light-accent-2;
   margin: 10px 0 10px 0;
 }
 
 .cover-box-title-authors {
-  color: $dark-accent-1;
+  color: $light-accent-2;
   margin: 10px 0 10px 0;
 }
 
@@ -603,20 +672,13 @@ h1.cover-box-title-headline,
   }
 }
 
-/* Collaboration */
-.section#collaboration {
-  hr {
-    display: none;
-  }
-}
-
 /* footer */
 footer {
-  margin: 120px 0 0 0;
+  margin: 50px 0 0 0;
+  overflow: auto;
 }
 
 .authors {
-  background-color: $gray-0;
   float: left;
   margin: -50px 0 0 0;
   overflow: auto;
@@ -629,18 +691,26 @@ footer {
   text-align: center;
   width: 100%;
   h2 {
-    border-bottom: 3px solid $gray-1;
     color: $dark-accent-1;
     font-family: "Roboto Slab", Georgia, sans-serif;
-    padding: 0 0 12px 0;
   }
 }
 
 .authors-about {
+  background-color: $gray-0;
+  border-radius: 5px;
   display: inline-block;
   float: left;
   padding: 20px 30px 20px 30px;
-  width: 50%;
+  width: 44%;
+}
+
+.authors-about:nth-of-type(2) {
+  margin: 3% 2% 3% 4%;
+}
+
+.authors-about:nth-of-type(3) {
+  margin: 3% 4% 3% 2%;
 }
 
 .authors-about-image {
@@ -651,7 +721,7 @@ footer {
   img {
     border-radius: 100%;
     margin: 20px 0 0 0;
-    max-width: 200px;
+    max-width: 140px;
     width: 100%;
   }
 }
@@ -686,7 +756,12 @@ footer {
   .authors-about {
     display: block;
     float: left;
+    margin: 0;
     width: 100%;
+  }
+  .authors-about:nth-of-type(2),
+  .authors-about:nth-of-type(3) {
+    margin: 0;
   }
   .authors-about-image,
   .authors-about-text {
@@ -700,7 +775,7 @@ footer {
 }
 
 .credits {
-  background-color: $dark-accent-0;
+  background-color: $gray-2;
   float: left;
   height: 40px;
   margin: 0;

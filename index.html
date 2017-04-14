@@ -13,10 +13,12 @@
 		</div>
 		<div class="cover-box">
 			<div class="cover-box-image">
-				{# <!-- <img class="cover-box-image-featured" src="{{ featured_image }}"> --> #}
+				<img class="cover-box-image-featured" src="{{ featured_image }}"> 
+				{# <!--
 				<video autoplay="autoplay" loop="loop" width="100%">
 					<source src="img/blended_learning_thinkcerca_ebook.mov">
 				</video>
+				--> #}
 			</div>
 		</div>
 	</div>
@@ -50,13 +52,13 @@
 				{% for element in content if element.chapter == var_chapter %}
 					{# <!-- SHOULD AN ELEMENT TAG PRECEDE THE BELOW ELEMENT(S)? --> #}
 					{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT --> #}
-					{% if element.prepend %}<{{ element.prepend }} {% if element.prepend_class %}class="{{ element.prepend_class }}"{% endif %}{% if element.prepend == 'a' %} href="{{ element.href }}" {% if element.no_new_tab != 'x' %}target="_blank"{% endif %}{% endif %}>{% endif %}
+					{% if element.prepend %}<{{ element.prepend }} {% if element.prepend_class %}class="{{ element.prepend_class }}"{% endif %}{% if element.prepend == 'a' %} href="{{ element.href }}" {% if element.no_new_tab != 'x' %}target="_blank"{% endif %}{% endif %}{% if element.background_image %} style="background-image: url('{{ element.background_image}}');"{% endif %}>{% endif %}
 						{# <!-- SHOULD THE INNER-MOST ELEMENT BELOW BE ENCLOSED WITHIN ANOTHER ELEMENT? --> #}
 						{# <!-- FOR INSTANCE, IF THE INNER-MOST ELEMENT IS A `LI`, MAKE THE ENCLOSING ELEMENT AN `OL` OR `UL` --> #}
-						{% if element.enclose %}<{{ element.enclose }} {% if element.enclose_class %}class="{{ element.enclose_class }}"{% endif %}{% if element.enclose == 'a' %} href="{{ element.href }}" {% if element.no_new_tab != 'x' %}target="_blank"{% endif %}{% endif %}>{% endif %}
+						{% if element.enclose %}<{{ element.enclose }} {% if element.enclose_class %}class="{{ element.enclose_class }}"{% endif %}{% if element.enclose == 'a' %} href="{{ element.href }}" {% if element.no_new_tab != 'x' %}target="_blank"{% endif %}{% endif %}{% if element.background_image %} style="background-image: url('{{ element.background_image}}');"{% endif %}>{% endif %}
 							{# <!-- THE ELEMENT AND ITS TEXT. PULLED FROM A SPREADSHEET CELL. --> #}
 							{# <!-- SUCH AS: A PARAGRAPH OR A BULLET POINT --> #}
-							{% if element.tag %}<{{ element.tag }} {% if element.tag_class %}class="{{ element.tag_class }}"{% endif %}{% if element.tag == 'a' %} href="{{ element.href }}" {% if element.no_new_tab != 'x' %}target="_blank"{% endif %}{% endif %}{% if element.tag == 'img' %}src="{{ element.src }}"{% endif %}>{% endif %}{% if element.text %}{{ element.text|process_text }}{% endif %}{% if element.tag %}</{{ element.tag }}>{% endif %}
+							{% if element.tag %}<{{ element.tag }} {% if element.tag_class %}class="{{ element.tag_class }}"{% endif %}{% if element.tag == 'a' %} href="{{ element.href }}"{% if element.no_new_tab != 'x' %} target="_blank"{% endif %}{% endif %}{% if element.tag == 'img' %} src="{{ element.src }}"{% endif %}{% if element.background_image %} style="background-image: url('{{ element.background_image}}');"{% endif %}>{% endif %}{% if element.text %}{{ element.text|process_text }}{% endif %}{% if element.tag %}</{{ element.tag }}>{% endif %}
 						{% if element.enclose %}</{{ element.enclose }}>{% endif %}
 					{# <!-- SHOULD AN ELEMENT TAG FOLLOW THE ABOVE ELEMENT(S)? --> #}
 					{# <!-- IF THERE ARE MANY `LI`S, FOR INSTANCE, THE FIRST ONE SHOULD HAVE A PREPENDED ELEMENT OF `OL` OR `UL`. THE LAST ONE SHOULD HAVE A DUPLICATED APPENDED ELEMENT BELOW --> #}
