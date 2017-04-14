@@ -501,34 +501,35 @@ h1.cover-box-title-headline,
   display: flex;
   justify-content: center; }
 
-.about-social a:hover .about-social-share {
-  background-color: #00b7bd; }
+.about-social-share,
+.twitter-share-button {
+  margin: 10px 20px 10px 20px; }
 
-.about-social-share {
+.about-social-share.email {
   align-items: center;
-  background-color: #a0d597;
-  border: none;
-  border-radius: 30px;
+  background-color: #00b7bd;
+  border-radius: 3px;
+  color: #ffffff;
   display: flex;
-  height: 50px;
+  font-weight: 500;
   justify-content: center;
-  margin: 10px 30px 10px 30px;
-  padding: 5px 20px 5px 20px;
-  width: 100px;
-  -webkit-transition: all ease-in-out 0.4s;
-  /* Safari */
-  transition: all ease-in-out 0.4s; }
-  .about-social-share i {
-    color: #ffffff;
-    font-size: 30px; }
+  padding: 5px 10px 5px 10px; }
+  .about-social-share.email i.material-icons {
+    font-size: 15px;
+    margin-right: 5px; }
+  .about-social-share.email span {
+    font-size: 13px; }
+
+.about-social-share:focus {
+  outline: none;
+  text-decoration: none; }
+
+.about-social-share.email:hover {
+  background-color: #2f939c; }
 
 @media (max-width: 767px) {
   .about-social-share {
-    border-radius: 100%;
-    height: 50px;
-    margin: 5px 10px;
-    padding: 5px;
-    width: 50px; } }
+    margin: 10px 20px 10px 20px; } }
 /* footer */
 footer {
   margin: 50px 0 0 0;
