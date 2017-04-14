@@ -431,6 +431,14 @@ html body .cta-dark-background {
   overflow: auto;
   width: 50%; }
 
+.cover-box-title {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-left: auto;
+  max-width: 440px;
+  text-align: center; }
+
 @media (max-width: 767px) {
   .cover.section {
     display: block;
@@ -440,15 +448,10 @@ html body .cta-dark-background {
 
   .cover-box {
     display: block;
-    width: 100%; } }
-.cover-box-title {
-  margin-top: 20px;
-  margin-right: auto;
-  margin-bottom: 10px;
-  margin-left: auto;
-  max-width: 440px;
-  text-align: center; }
+    width: 100%; }
 
+  .cover-box-title {
+    padding: 15px; } }
 .cover-box-title-about {
   color: #a0d597;
   margin: 0 0 20px 0;
