@@ -501,10 +501,10 @@ h1.cover-box-title-headline,
   display: flex;
   justify-content: center; }
 
-.about-social-share,
-.twitter-share-button {
-  margin: 10px 20px 10px 20px; }
-
+@media (max-width: 767px) {
+  .about-social-share,
+  .twitter-share-button {
+    margin: 10px; } }
 .about-social-share.email {
   align-items: center;
   background-color: #00b7bd;
@@ -528,8 +528,9 @@ h1.cover-box-title-headline,
   background-color: #2f939c; }
 
 @media (max-width: 767px) {
-  .about-social-share {
-    margin: 10px 20px 10px 20px; } }
+  .about-social-share,
+  .twitter-share-button {
+    margin: 10px; } }
 /* footer */
 footer {
   margin: 50px 0 0 0;

@@ -640,9 +640,11 @@ h1.cover-box-title-headline,
   justify-content: center;
 }
 
-.about-social-share,
-.twitter-share-button {
-  margin: 10px 20px 10px 20px;
+@media (max-width: 767px) {
+  .about-social-share,
+  .twitter-share-button {
+    margin: 10px;
+  }
 }
 
 .about-social-share.email {
@@ -673,8 +675,9 @@ h1.cover-box-title-headline,
 }
 
 @media (max-width: 767px) {
-  .about-social-share {
-    margin: 10px 20px 10px 20px;
+  .about-social-share,
+  .twitter-share-button {
+    margin: 10px;
   }
 }
 
