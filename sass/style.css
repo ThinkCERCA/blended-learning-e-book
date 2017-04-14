@@ -501,10 +501,10 @@ h1.cover-box-title-headline,
   display: flex;
   justify-content: center; }
 
-@media (max-width: 767px) {
-  .about-social-share,
-  .twitter-share-button {
-    margin: 10px; } }
+.about-social-share,
+.twitter-share-button {
+  margin: 10px 20px 10px 20px; }
+
 .about-social-share.email {
   align-items: center;
   background-color: #00b7bd;
