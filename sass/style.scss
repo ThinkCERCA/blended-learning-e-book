@@ -280,6 +280,38 @@ html body .navbar-default .navbar-toggle .icon-bar {
   }
 }
 
+/* Progress bar */
+progress {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 47px;
+  width: 100%;
+  height: 4px;
+  /* Reset the apperance */  
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+  /* For Firefox/IE10+ */
+  background-color: transparent;
+  /* For IE10+, color of the progress bar */
+  color: $light-accent-2;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+  background-color: $light-accent-2;
+}
+
+progress::-moz-progress-bar {
+  background-color: $light-accent-2;
+}
+
 /* Section styles */
 .section {
   display: block; 
