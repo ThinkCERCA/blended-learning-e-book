@@ -98,17 +98,13 @@ html body p:first-of-type {
 /* Overarching styles */
 html body {
   color: #2d3338;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1300px; }
+  font-family: "Roboto", Helvetica, Arial, sans-serif; }
 
 blockquote {
   overflow: auto; }
 
 .ebook {
-  margin-top: 50px 0 0 0;
-  max-width: 1300px; }
+  margin: 50px 0 0 0; }
 
 @media (max-width: 992px) {
   .ebook {
@@ -450,6 +446,7 @@ html body .cta-dark-background {
   align-items: center;
   background-color: #2f939c;
   display: flex;
+  justify-content: center;
   margin: 50px 0 0 0;
   padding: 40px 0 60px 0; }
 
@@ -457,6 +454,7 @@ html body .cta-dark-background {
   display: inline-block;
   float: left;
   overflow: auto;
+  max-width: 600px;
   width: 50%; }
 
 .cover-box-title {
