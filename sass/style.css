@@ -79,7 +79,6 @@ html body h5 {
   text-transform: uppercase; }
 
 html body p {
-  color: #444d54;
   font-size: 16px;
   font-weight: normal;
   line-height: 26px;
@@ -88,9 +87,6 @@ html body p {
 
 html body p {
   margin: 30px 0 30px 0; }
-
-html body p:last-of-type {
-  margin-bottom: 10px; }
 
 html body p:first-of-type {
   margin-top: 20px; }
@@ -273,20 +269,24 @@ progress::-moz-progress-bar {
 .section-row-callout {
   background-color: #e6f7f8;
   border-radius: 5px;
-  float: right;
+  float: left;
   margin-top: 30px;
   margin-right: 10%;
   margin-bottom: 30px;
   margin-left: 10%;
   padding: 30px;
   width: 80%; }
+  .section-row-callout p:last-of-type {
+    margin-bottom: 10px; }
+  .section-row-callout h3 {
+    margin-top: 0; }
 
 @media (max-width: 767px) {
   .section-row-callout {
     clear: both;
     float: left;
-    margin: 20px 0 20px 0;
-    padding: 10px 10px 10px 20px;
+    margin: 10px 0 30px 0;
+    padding: 20px 20px 20px 20px;
     width: 100%; } }
 /* Section CTAs */
 .section-row-cta {
@@ -307,6 +307,9 @@ progress::-moz-progress-bar {
   .section-row-cta i {
     color: #00b7bd; }
   .section-row-cta p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
     margin: 10px 0 10px 0; }
 
 a.section-row-cta:hover,
@@ -316,13 +319,15 @@ a .section-row-cta:hover {
   /* Safari */
   transition: all ease-in-out 0.4s; }
 
-.cta-small {
+.cta-small,
+.cta-xsmall {
   width: 200px; }
 
 .cta-medium {
   width: 320px; }
 
 .cta-large {
+  padding: 15px 30px 15px 30px;
   width: 400px; }
 
 .cta-across {
@@ -388,7 +393,7 @@ a .section-row-cta:hover {
     height: auto; }
     .inline-image img {
       display: block; } }
-html body .cta-dark-background {
+html body .cta-webinar {
   background-color: #2f939c;
   background-position: center;
   background-repeat: no-repeat;
@@ -396,20 +401,22 @@ html body .cta-dark-background {
   border-radius: 5px;
   color: #ffffff;
   clear: none;
+  float: left;
   margin-top: 40px;
+  margin-bottom: 70px;
   overflow: auto; }
-  html body .cta-dark-background h1, html body .cta-dark-background h2, html body .cta-dark-background h3, html body .cta-dark-background h4, html body .cta-dark-background p {
+  html body .cta-webinar h1, html body .cta-webinar h2, html body .cta-webinar h3, html body .cta-webinar h4, html body .cta-webinar p {
     color: #ffffff; }
-  html body .cta-dark-background h5 {
+  html body .cta-webinar h5 {
     color: #a0d597; }
-  html body .cta-dark-background h2 {
+  html body .cta-webinar h2 {
     font-family: "Roboto Slab", Georgia, sans-serif;
     color: #ffffff; }
-  html body .cta-dark-background h5 {
+  html body .cta-webinar h5 {
     letter-spacing: 3px; }
-  html body .cta-dark-background h2, html body .cta-dark-background p {
+  html body .cta-webinar h2, html body .cta-webinar p {
     margin: 30px 0 30px 0; }
-  html body .cta-dark-background .cta-across-text {
+  html body .cta-webinar .cta-across-text {
     padding: 20px 0 20px 0; }
 
 @media (max-width: 1239px) {
@@ -437,16 +444,18 @@ html body .cta-dark-background {
   .cta-medium,
   .cta-medium.cta-left,
   .cta-medium.cta-right,
+  .cta-small.cta-left,
+  .cta-small.cta-right,
   .cta-across {
-    margin: 10px 0 10px 0;
+    margin: 10px 0 30px 0;
     width: 100%; }
 
-  .cta-small,
-  .cta-small.cta-left {
+  .cta-xsmall,
+  .cta-xsmall.cta-left {
     width: 46%;
     margin: 2% 4% 2% 2%; }
 
-  .cta-small.cta-right {
+  .cta-xsmall.cta-right {
     width: 46%;
     margin: 2% 2% 2% 4%; } }
 /* Cover */
@@ -667,11 +676,11 @@ html body .credits {
   html body .credits a:hover {
     text-decoration: underline; }
   html body .credits li {
+    font-weight: 300;
     list-style-type: none; }
   html body .credits p, html body .credits li, html body .credits h5 {
     color: #444d54;
     font-size: 14px;
-    font-weight: 500;
     line-height: 20px; }
   html body .credits p, html body .credits .credits-support ul,
   html body .credits .submitted-message {

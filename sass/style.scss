@@ -101,7 +101,6 @@ html body h5 {
 }
 
 html body p {
-  color: $gray-7;
   font-size: 16px;
   font-weight: normal;
   line-height: 26px;
@@ -111,10 +110,6 @@ html body p {
 
 html body p {
   margin: 30px 0 30px 0;
-}
-
-html body p:last-of-type {
-  margin-bottom: 10px;
 }
 
 html body p:first-of-type {
@@ -347,21 +342,27 @@ progress::-moz-progress-bar {
 .section-row-callout {
   background-color: $light-accent-0;
   border-radius: 5px;
-  float: right;
+  float: left;
   margin-top: 30px;
   margin-right: 10%;
   margin-bottom: 30px;
   margin-left: 10%;
   padding: 30px;
   width: 80%;
+  p:last-of-type {
+    margin-bottom: 10px;
+  }
+  h3 {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 767px) {
   .section-row-callout {
     clear: both;
     float: left;
-    margin: 20px 0 20px 0;
-    padding: 10px 10px 10px 20px;
+    margin: 10px 0 30px 0;
+    padding: 20px 20px 20px 20px;
     width: 100%;
   }
 }
@@ -372,7 +373,7 @@ progress::-moz-progress-bar {
   background-color: $light-accent-0;
   border: 1px solid $light-accent-1;
   border-radius: 5px;
-  color: $dark-accent-1;
+  color: $gray-7;
   margin-top: 20px;
   margin-bottom: 20px;
   overflow: auto;
@@ -390,6 +391,9 @@ progress::-moz-progress-bar {
     color: $base-color;
   }
   p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
     margin: 10px 0 10px 0;
   }
 }
@@ -401,7 +405,8 @@ a .section-row-cta:hover {
   transition: all ease-in-out 0.4s;
 }
 
-.cta-small {
+.cta-small,
+.cta-xsmall {
   width: 200px;
 }
 
@@ -410,6 +415,7 @@ a .section-row-cta:hover {
 }
 
 .cta-large {
+  padding: 15px 30px 15px 30px;
   width: 400px;
 }
 
@@ -501,7 +507,7 @@ a .section-row-cta:hover {
   }
 }
 
-html body .cta-dark-background {
+html body .cta-webinar {
   background-color: $dark-accent-0;
   background-position: center;
   background-repeat: no-repeat;
@@ -509,7 +515,9 @@ html body .cta-dark-background {
   border-radius: 5px;
   color: #ffffff;
   clear: none;
+  float: left;
   margin-top: 40px;
+  margin-bottom: 70px;
   overflow: auto;
   h1, h2, h3, h4, p {
     color: #ffffff;
@@ -566,16 +574,18 @@ html body .cta-dark-background {
   .cta-medium,
   .cta-medium.cta-left,
   .cta-medium.cta-right,
+  .cta-small.cta-left,
+  .cta-small.cta-right,
   .cta-across {
-    margin: 10px 0 10px 0;
+    margin: 10px 0 30px 0;
     width: 100%;
   }
-  .cta-small,
-  .cta-small.cta-left {
+  .cta-xsmall,
+  .cta-xsmall.cta-left {
     width: 46%;
     margin: 2% 4% 2% 2%;
   }
-  .cta-small.cta-right {
+  .cta-xsmall.cta-right {
     width: 46%;
     margin: 2% 2% 2% 4%;
   }
@@ -844,12 +854,12 @@ html body .credits {
     text-decoration: underline;
   }
   li {
+    font-weight: 300;
     list-style-type: none;
   }
   p, li, h5 {
     color: $dark-accent-1;
     font-size: 14px;
-    font-weight: 500;
     line-height: 20px;
   }
   p, .credits-support ul,
