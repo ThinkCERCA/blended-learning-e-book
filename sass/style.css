@@ -74,7 +74,7 @@ html body h4 {
 html body h5 {
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 20px;
   text-transform: uppercase; }
 
@@ -464,6 +464,8 @@ html body .cta-dark-background {
   margin-left: auto;
   max-width: 440px;
   text-align: center; }
+  .cover-box-title h5 {
+    letter-spacing: 2px; }
 
 @media (max-width: 767px) {
   .cover.section {
@@ -647,23 +649,78 @@ html body .credits {
   float: left;
   margin: 40px 0 0 0;
   overflow: auto;
-  padding: 10px;
+  padding: 10px 10px 20px 10px;
   width: 100%; }
   html body .credits a {
-    color: #444d54;
-    font-weight: 500; }
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: underline; }
   html body .credits a:hover {
     color: #444d54;
     text-decoration: underline; }
   html body .credits li {
+    font-weight: 500;
     list-style-type: none; }
-  html body .credits p, html body .credits li {
+  html body .credits p, html body .credits li, html body .credits h5 {
     color: #ffffff;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px; }
-  html body .credits p, html body .credits ul {
-    margin: 20px;
+  html body .credits p, html body .credits .credits-support ul,
+  html body .credits .submitted-message {
+    margin: 20px 10px 10px 10px;
     padding: 0; }
+
+.credits-signup {
+  max-width: 600px; }
+  .credits-signup .hs-form-field,
+  .credits-signup .hs_submit {
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-top: 10px;
+    margin-left: 2%;
+    overflow: auto; }
+  .credits-signup input.hs-input {
+    background: #ffffff;
+    border: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: normal;
+    outline: none;
+    padding: 5px; }
+  .credits-signup .hs-form-required {
+    display: none; }
+  .credits-signup input {
+    width: 100%; }
+  .credits-signup input.hs-button {
+    background-color: #444d54;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px 8px;
+    text-align: center;
+    transition: all ease-in-out .4s;
+    width: auto; }
+  .credits-signup input.hs-button:focus {
+    outline: none; }
+  .credits-signup input.hs-button:hover {
+    background-color: #ffffff;
+    color: #444d54;
+    transition: all ease-in-out .4s; }
+  .credits-signup label {
+    display: none; }
+  .credits-signup .submitted-message {
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic; }
 
 /*# sourceMappingURL=style.css.map */

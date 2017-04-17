@@ -20,7 +20,7 @@
 		<div class="credits-about col-lg-4 col-md-4 col-sm-12">
 			<p>{{ credits_about }}</p>
 		</div>
-		<div class="credits-support col-lg-4 col-md-4 col-sm-12">
+		<div class="credits-support col-lg-3 col-md-3 col-sm-12">
 			<ul>
 				{% for credit in credits %}
 				<li>{{ credit.work }} | <a href="{{ credit.link }}" target="_blank">{{ credit.person }}</a></li>
@@ -28,6 +28,9 @@
 			</ul>
 			<p>{{ copyright }}</p>
 		</div>
-		<div class="credits-social col-lg-4 col-md-4 col-sm-12"></div>
+		<div class="credits-signup col-lg-5 col-md-5 col-sm-12">
+			<p>{{ newsletter_join|process_text }}</p>			
+			{{ newsletter_signup|process_text }}
+		</div>
 	</div>
 </footer>

@@ -95,7 +95,7 @@ html body h4 {
 html body h5 {
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   line-height: 20px;
   text-transform: uppercase;
 }
@@ -593,6 +593,9 @@ html body .cta-dark-background {
   margin-left: auto;
   max-width: 440px;
   text-align: center;
+  h5 {
+    letter-spacing: 2px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -812,31 +815,95 @@ footer {
 }
 
 html body .credits {
-  background-color: $light-accent-2;
+  background-color: $light-accent-0;
+  border: 1px solid $light-accent-1;
   float: left;
   margin: 40px 0 0 0;
   overflow: auto;
-  padding: 10px;
+  padding: 10px 10px 20px 10px;
   width: 100%;
   a {
     color: $dark-accent-1;
-    font-weight: 500;
+    font-weight: 400;
+    text-decoration: underline;
   }
   a:hover {
-    color: $dark-accent-1;
     text-decoration: underline;
   }
   li {
     list-style-type: none;
   }
-  p, li {
-    color: #ffffff;
+  p, li, h5 {
+    color: $dark-accent-1;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
   }
-  p, ul {
-    margin: 20px;
+  p, .credits-support ul,
+  .submitted-message {
+    margin: 20px 10px 10px 10px;
     padding: 0;
+  }
+}
+
+.credits-signup {
+  max-width: 600px;
+  .hs-form-field,
+  .hs_submit {
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin-top: 10px;
+    margin-left: 2%;
+    overflow: auto;
+  }
+  input.hs-input {
+    background: #ffffff;
+    border: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: normal;
+    outline: none;
+    padding: 5px;
+  }
+  .hs-form-required {
+    display: none;
+  }
+  input {
+    width: 100%;
+  }
+  input.hs-button {
+    background-color: $base-color;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: "Roboto", Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px 8px;
+    text-align: center;
+    transition: all ease-in-out .4s;
+    width: auto;
+  }
+  input.hs-button:focus {
+    outline: none;
+  }
+  input.hs-button:hover {
+    background-color: #ffffff;
+    color: $base-color;
+    transition: all ease-in-out .4s;
+  }
+  label {
+    display: none;
+  }
+  .submitted-message {
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic;
   }
 }
