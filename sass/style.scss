@@ -303,6 +303,47 @@ progress::-moz-progress-bar {
   background-color: $light-accent-2;
 }
 
+/* Navigation prompt */
+.nav-prompt {
+  align-items: center;
+  background-color: $base-color;
+  border-bottom: 1px solid $dark-accent-0;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin: 1px 0 -1px 0;
+  overflow: auto;
+  padding: 5px;
+  text-align: center;
+  -webkit-transition: all ease-in-out 0.4s; /* Safari */
+  transition: all ease-in-out 0.4s;
+  width: 100%;
+  i {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 4px;
+  }
+  p,
+  p:first-of-type {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.nav-prompt:hover {
+  background-color: $dark-accent-0;
+  -webkit-transition: all ease-in-out 0.4s; /* Safari */
+  transition: all ease-in-out 0.4s;
+}
+
+@media (max-width: 767px) {
+  .nav-prompt {
+    display: block;
+  }
+}
+
 /* Section styles */
 .section {
   display: block; 
@@ -910,7 +951,8 @@ html body .credits {
     margin: 0;
     padding: 5px 8px;
     text-align: center;
-    transition: all ease-in-out .4s;
+    -webkit-transition: all ease-in-out 0.4s; /* Safari */
+    transition: all ease-in-out 0.4s;
     width: auto;
   }
   input.hs-button:focus {

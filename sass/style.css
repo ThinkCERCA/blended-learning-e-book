@@ -238,6 +238,42 @@ progress::-webkit-progress-value {
 progress::-moz-progress-bar {
   background-color: #a0d597; }
 
+/* Navigation prompt */
+.nav-prompt {
+  align-items: center;
+  background-color: #00b7bd;
+  border-bottom: 1px solid #2f939c;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin: 1px 0 -1px 0;
+  overflow: auto;
+  padding: 5px;
+  text-align: center;
+  -webkit-transition: all ease-in-out 0.4s;
+  /* Safari */
+  transition: all ease-in-out 0.4s;
+  width: 100%; }
+  .nav-prompt i {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 4px; }
+  .nav-prompt p,
+  .nav-prompt p:first-of-type {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0; }
+
+.nav-prompt:hover {
+  background-color: #2f939c;
+  -webkit-transition: all ease-in-out 0.4s;
+  /* Safari */
+  transition: all ease-in-out 0.4s; }
+
+@media (max-width: 767px) {
+  .nav-prompt {
+    display: block; } }
 /* Section styles */
 .section {
   display: block;
@@ -724,7 +760,9 @@ html body .credits {
     margin: 0;
     padding: 5px 8px;
     text-align: center;
-    transition: all ease-in-out .4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    /* Safari */
+    transition: all ease-in-out 0.4s;
     width: auto; }
   .credits-signup input.hs-button:focus {
     outline: none; }

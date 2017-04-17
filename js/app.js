@@ -1,3 +1,8 @@
+$(document).ready(function() {
+    $("#nav-prompt").hide();
+    $("#nav-prompt").delay(240000).fadeIn();
+});
+
 $(document).ready(function(){
     
     var getMax = function(){
