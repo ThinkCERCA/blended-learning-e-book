@@ -16,5 +16,18 @@
 		</div>
 		{% endfor %}
 	</div>
-	<div class="credits" id="credits"></div>
+	<div class="credits" id="credits">
+		<div class="credits-about col-lg-4 col-md-4 col-sm-12">
+			<p>{{ credits_about }}</p>
+		</div>
+		<div class="credits-support col-lg-4 col-md-4 col-sm-12">
+			<ul>
+				{% for credit in credits %}
+				<li>{{ credit.work }} | <a href="{{ credit.link }}" target="_blank">{{ credit.person }}</a></li>
+				{% endfor %}
+			</ul>
+			<p>{{ copyright }}</p>
+		</div>
+		<div class="credits-social col-lg-4 col-md-4 col-sm-12"></div>
+	</div>
 </footer>

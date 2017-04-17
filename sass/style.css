@@ -642,13 +642,28 @@ footer {
   .authors-about-text h3,
   .authors-about-text h4 {
     text-align: center; } }
-.credits {
-  background-color: #c6ccd1;
+html body .credits {
+  background-color: #a0d597;
   float: left;
-  height: 40px;
-  margin: 0;
+  margin: 40px 0 0 0;
   overflow: auto;
-  text-align: center;
+  padding: 10px;
   width: 100%; }
+  html body .credits a {
+    color: #444d54;
+    font-weight: 500; }
+  html body .credits a:hover {
+    color: #444d54;
+    text-decoration: underline; }
+  html body .credits li {
+    list-style-type: none; }
+  html body .credits p, html body .credits li {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px; }
+  html body .credits p, html body .credits ul {
+    margin: 20px;
+    padding: 0; }
 
 /*# sourceMappingURL=style.css.map */
