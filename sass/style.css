@@ -379,7 +379,15 @@ a .section-row-cta:hover {
   border-radius: 5px;
   clear: none;
   overflow: auto; }
+  .inline-image img {
+    display: none; }
 
+@media (max-width: 767px) {
+  .inline-image {
+    background-image: none !important;
+    height: auto; }
+    .inline-image img {
+      display: block; } }
 html body .cta-dark-background {
   background-color: #2f939c;
   background-position: center;
@@ -645,24 +653,23 @@ footer {
   .authors-about-text h4 {
     text-align: center; } }
 html body .credits {
-  background-color: #a0d597;
+  background-color: #e6f7f8;
+  border: 1px solid #cdf0f2;
   float: left;
   margin: 40px 0 0 0;
   overflow: auto;
   padding: 10px 10px 20px 10px;
   width: 100%; }
   html body .credits a {
-    color: #ffffff;
-    font-weight: 500;
+    color: #444d54;
+    font-weight: 400;
     text-decoration: underline; }
   html body .credits a:hover {
-    color: #444d54;
     text-decoration: underline; }
   html body .credits li {
-    font-weight: 500;
     list-style-type: none; }
   html body .credits p, html body .credits li, html body .credits h5 {
-    color: #ffffff;
+    color: #444d54;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px; }
@@ -699,7 +706,7 @@ html body .credits {
   .credits-signup input {
     width: 100%; }
   .credits-signup input.hs-button {
-    background-color: #444d54;
+    background-color: #00b7bd;
     border: none;
     border-radius: 5px;
     color: white;
@@ -714,7 +721,7 @@ html body .credits {
     outline: none; }
   .credits-signup input.hs-button:hover {
     background-color: #ffffff;
-    color: #444d54;
+    color: #00b7bd;
     transition: all ease-in-out .4s; }
   .credits-signup label {
     display: none; }

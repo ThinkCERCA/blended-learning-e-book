@@ -486,6 +486,19 @@ a .section-row-cta:hover {
   border-radius: 5px;
   clear: none;
   overflow: auto;
+  img {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .inline-image {
+    background-image: none !important;
+    height: auto;
+    img {
+      display: block;
+    }
+  }
 }
 
 html body .cta-dark-background {
