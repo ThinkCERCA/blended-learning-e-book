@@ -98,6 +98,12 @@ a:focus {
   outline: none;
   text-decoration: none; }
 
+html body p.caption {
+  color: #8e9aa3;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0 0 0; }
+
 /* Overarching styles */
 html body {
   color: #2d3338;
@@ -785,23 +791,22 @@ html body .credits {
   background-color: #e6f7f8;
   border: 1px solid #cdf0f2;
   float: left;
+  font-weight: 500;
   margin: 40px 0 0 0;
   overflow: auto;
-  padding: 10px 10px 20px 10px;
+  padding: 30px 20px 40px 20px;
   width: 100%; }
   html body .credits a {
-    color: #444d54;
-    font-weight: 400;
-    text-decoration: underline; }
-  html body .credits a:hover {
-    text-decoration: underline; }
+    font-weight: 500; }
   html body .credits li {
-    font-weight: 300;
+    font-weight: 400;
     list-style-type: none; }
   html body .credits p, html body .credits li, html body .credits h5 {
     color: #444d54;
     font-size: 14px;
     line-height: 20px; }
+  html body .credits p {
+    font-weight: 400; }
   html body .credits p, html body .credits .credits-support ul,
   html body .credits .submitted-message {
     margin: 20px 10px 10px 10px;

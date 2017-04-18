@@ -125,6 +125,13 @@ a:focus {
   text-decoration: none;
 }
 
+html body p.caption {
+  color: $gray-4;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0 0 0;
+}
+
 /* Overarching styles */
 html body {
   color: $base-gray;
@@ -981,26 +988,25 @@ html body .credits {
   background-color: $light-accent-0;
   border: 1px solid $light-accent-1;
   float: left;
+  font-weight: 500;
   margin: 40px 0 0 0;
   overflow: auto;
-  padding: 10px 10px 20px 10px;
+  padding: 30px 20px 40px 20px;
   width: 100%;
   a {
-    color: $dark-accent-1;
-    font-weight: 400;
-    text-decoration: underline;
-  }
-  a:hover {
-    text-decoration: underline;
+    font-weight: 500;
   }
   li {
-    font-weight: 300;
+    font-weight: 400;
     list-style-type: none;
   }
   p, li, h5 {
     color: $dark-accent-1;
     font-size: 14px;
     line-height: 20px;
+  }
+  p {
+    font-weight: 400;
   }
   p, .credits-support ul,
   .submitted-message {
