@@ -988,7 +988,7 @@ html body .credits {
   background-color: $light-accent-0;
   border: 1px solid $light-accent-1;
   float: left;
-  font-weight: 500;
+  font-size: 14px;
   margin: 40px 0 0 0;
   overflow: auto;
   padding: 30px 20px 40px 20px;
@@ -1000,13 +1000,13 @@ html body .credits {
     font-weight: 400;
     list-style-type: none;
   }
-  p, li, h5 {
+  .credits-about p,
+  .credits-support p, 
+  .credits-support li {
     color: $dark-accent-1;
     font-size: 14px;
-    line-height: 20px;
-  }
-  p {
     font-weight: 400;
+    line-height: 20px;
   }
   p, .credits-support ul,
   .submitted-message {
@@ -1017,6 +1017,12 @@ html body .credits {
 
 .credits-signup {
   max-width: 600px;
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+  }
   .hs-form-field,
   .hs_submit {
     width: 48%;
@@ -1075,5 +1081,11 @@ html body .credits {
     color: #ffffff;
     font-size: 14px;
     font-style: italic;
+  }
+}
+
+@media (max-width: 992px) {
+  .credits-signup p {
+    text-align: left;
   }
 }

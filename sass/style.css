@@ -791,7 +791,7 @@ html body .credits {
   background-color: #e6f7f8;
   border: 1px solid #cdf0f2;
   float: left;
-  font-weight: 500;
+  font-size: 14px;
   margin: 40px 0 0 0;
   overflow: auto;
   padding: 30px 20px 40px 20px;
@@ -801,12 +801,13 @@ html body .credits {
   html body .credits li {
     font-weight: 400;
     list-style-type: none; }
-  html body .credits p, html body .credits li, html body .credits h5 {
+  html body .credits .credits-about p,
+  html body .credits .credits-support p,
+  html body .credits .credits-support li {
     color: #444d54;
     font-size: 14px;
+    font-weight: 400;
     line-height: 20px; }
-  html body .credits p {
-    font-weight: 400; }
   html body .credits p, html body .credits .credits-support ul,
   html body .credits .submitted-message {
     margin: 20px 10px 10px 10px;
@@ -814,6 +815,11 @@ html body .credits {
 
 .credits-signup {
   max-width: 600px; }
+  .credits-signup p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center; }
   .credits-signup .hs-form-field,
   .credits-signup .hs_submit {
     width: 48%;
@@ -865,5 +871,9 @@ html body .credits {
     color: #ffffff;
     font-size: 14px;
     font-style: italic; }
+
+@media (max-width: 992px) {
+  .credits-signup p {
+    text-align: left; } }
 
 /*# sourceMappingURL=style.css.map */
