@@ -6,6 +6,10 @@ $(".nav-prompt-exit-icon").click(function(){
     $("#nav-prompt").css("display", "none");
 });
 
+$('.mobile-chapter-navigation a').click(function (e) {
+    $('.navbar-collapse').collapse('toggle');
+});
+
 $(document).ready(function(){
     
     var getMax = function(){
