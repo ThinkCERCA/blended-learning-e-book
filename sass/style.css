@@ -20,6 +20,9 @@ html body a:visited {
   font-weight: 600;
   text-decoration: none; }
 
+body {
+  overflow: auto; }
+
 html body a:hover,
 .section-row-cta a i:hover,
 .section-row-cta i a:hover {
@@ -90,6 +93,10 @@ html body p {
 
 html body p:first-of-type {
   margin-top: 20px; }
+
+a:focus {
+  outline: none;
+  text-decoration: none; }
 
 /* Overarching styles */
 html body {
@@ -240,12 +247,8 @@ progress::-moz-progress-bar {
 
 /* Navigation prompt */
 .nav-prompt {
-  align-items: center;
   background-color: #00b7bd;
-  border-bottom: 1px solid #2f939c;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
+  display: none;
   margin: 1px 0 -1px 0;
   overflow: auto;
   padding: 5px;
@@ -255,9 +258,7 @@ progress::-moz-progress-bar {
   transition: all ease-in-out 0.4s;
   width: 100%; }
   .nav-prompt i {
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 4px; }
+    font-weight: 600; }
   .nav-prompt p,
   .nav-prompt p:first-of-type {
     color: #ffffff;
@@ -265,15 +266,76 @@ progress::-moz-progress-bar {
     font-weight: 500;
     margin: 0; }
 
-.nav-prompt:hover {
+.nav-prompt-exit {
+  display: flex;
+  float: left;
+  justify-content: center;
+  margin: 0;
+  width: 5%; }
+  .nav-prompt-exit i {
+    border-radius: 5px;
+    color: #2f939c;
+    float: right;
+    font-size: 16px;
+    line-height: inherit;
+    padding: 0 5px 0 5px; }
+
+.nav-prompt-exit-icon:hover {
   background-color: #2f939c;
+  color: #00b7bd;
+  cursor: pointer;
   -webkit-transition: all ease-in-out 0.4s;
   /* Safari */
   transition: all ease-in-out 0.4s; }
 
+.nav-prompt-text {
+  color: #ffffff;
+  float: left;
+  margin: 0;
+  width: 95%; }
+  .nav-prompt-text a {
+    align-items: center;
+    display: flex;
+    justify-content: center; }
+  .nav-prompt-text i {
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 4px; }
+
+.nav-prompt-desktop {
+  display: block; }
+
+.nav-prompt-mobile {
+  display: none; }
+
+.nav-prompt-text p:hover {
+  text-decoration: underline; }
+
 @media (max-width: 767px) {
   .nav-prompt {
-    display: block; } }
+    display: flex; }
+
+  .nav-prompt-exit {
+    margin-top: 6px;
+    text-align: center;
+    width: 100%; }
+
+  .nav-prompt-text {
+    display: block; }
+
+  .nav-prompt-text {
+    text-align: center;
+    width: 100%; }
+    .nav-prompt-text p {
+      line-height: 20px; }
+
+  .nav-prompt-mobile {
+    display: inline;
+    line-height: inherit;
+    vertical-align: bottom; }
+
+  .nav-prompt-desktop {
+    display: none; } }
 /* Section styles */
 .section {
   display: block;

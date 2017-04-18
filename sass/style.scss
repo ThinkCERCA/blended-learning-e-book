@@ -33,6 +33,10 @@ html body a:visited {
   text-decoration: none;
 }
 
+body {
+  overflow: auto;
+}
+
 html body a:hover,
 .section-row-cta a i:hover,
 .section-row-cta i a:hover {
@@ -114,6 +118,11 @@ html body p {
 
 html body p:first-of-type {
   margin-top: 20px;
+}
+
+a:focus {
+  outline: none;
+  text-decoration: none;
 }
 
 /* Overarching styles */
@@ -305,12 +314,8 @@ progress::-moz-progress-bar {
 
 /* Navigation prompt */
 .nav-prompt {
-  align-items: center;
   background-color: $base-color;
-  border-bottom: 1px solid $dark-accent-0;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
+  display: none;
   margin: 1px 0 -1px 0;
   overflow: auto;
   padding: 5px;
@@ -319,9 +324,7 @@ progress::-moz-progress-bar {
   transition: all ease-in-out 0.4s;
   width: 100%;
   i {
-    font-size: 14px;
     font-weight: 600;
-    margin-left: 4px;
   }
   p,
   p:first-of-type {
@@ -332,15 +335,85 @@ progress::-moz-progress-bar {
   }
 }
 
-.nav-prompt:hover {
+.nav-prompt-exit {
+  display: flex;
+  float: left;
+  justify-content: center;
+  margin: 0;
+  width: 5%;
+  i {
+    border-radius: 5px;
+    color: $dark-accent-0;
+    float: right;
+    font-size: 16px;
+    line-height: inherit;
+    padding: 0 5px 0 5px;
+  }
+}
+
+.nav-prompt-exit-icon:hover {
   background-color: $dark-accent-0;
+  color: $base-color;
+  cursor: pointer;
   -webkit-transition: all ease-in-out 0.4s; /* Safari */
   transition: all ease-in-out 0.4s;
 }
 
+.nav-prompt-text {
+  color: #ffffff;
+  float: left;
+  margin: 0;
+  width: 95%;
+  a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  i {
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 4px;
+  }
+}
+
+.nav-prompt-desktop {
+  display: block;
+}
+
+.nav-prompt-mobile {
+  display: none;
+}
+
+.nav-prompt-text p:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 767px) {
   .nav-prompt {
+    display: flex;
+  }
+  .nav-prompt-exit {
+    margin-top: 6px;
+    text-align: center;
+    width: 100%;
+  }
+  .nav-prompt-text {
     display: block;
+  }
+  .nav-prompt-text {
+    text-align: center;
+    width: 100%;
+    p {
+      line-height: 20px;
+    }
+  }
+  .nav-prompt-mobile {
+    display: inline;
+    line-height: inherit;
+    vertical-align: bottom;
+  }
+  .nav-prompt-desktop {
+    display: none;
   }
 }
 

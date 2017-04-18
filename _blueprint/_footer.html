@@ -1,4 +1,7 @@
 <footer>
+	{# FB pixel code added to footer per Hubspot's recommendation #}
+	{# (suggestes pixel interferes with Hubspot tracking #}
+	{{ facebook_pixel_code|process_text }}
 	<div class="authors" id="authors">
 		<div class="authors-hed">
 			<h2>About the Authors</h2>
@@ -33,4 +36,12 @@
 			{{ newsletter_signup|process_text }}
 		</div>
 	</div>
+	{# Test Facebook Pixel event code #}
+	{# Need to learn more about #}
+	<script>
+		fbq('track', 'Lead', {
+		value: 10.00,
+		currency: 'USD'
+		});
+	</script>
 </footer>

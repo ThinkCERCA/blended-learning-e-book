@@ -75,12 +75,17 @@
       <span class="progress-bar"></span>
     </div>
   </progress>
-  <a href="{{ nav_prompt_link }}" target="_blank">
   <div class="nav-prompt" id="nav-prompt">
-<!--     <a href="{{ nav_prompt_link }}" target="_blank"> -->
-      <p>{{ nav_prompt|process_text }}</p>
-      <i class="material-icons">open_in_new</i>
-<!--     </a> -->
+      <div class="nav-prompt-text">
+        <a href="{{ nav_prompt_link }}" target="_blank">
+          <p>{{ nav_prompt|process_text }}<i class="material-icons nav-prompt-mobile">open_in_new</i></p>
+          <i class="material-icons nav-prompt-desktop">open_in_new</i>
+        </a>
+      </div>
+    <div class="nav-prompt-exit">
+      <p>
+        <i class="material-icons nav-prompt-exit-icon">close</i>
+      </p>
+    </div>
   </div>
-  </a>
 </nav>

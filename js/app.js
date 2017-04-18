@@ -1,6 +1,9 @@
 $(document).ready(function() {
-    $("#nav-prompt").hide();
-    $("#nav-prompt").delay(240000).fadeIn();
+    $("#nav-prompt").css("display", "block").hide().delay(240000).fadeIn();
+});
+
+$(".nav-prompt-exit-icon").click(function(){
+    $("#nav-prompt").css("display", "none");
 });
 
 $(document).ready(function(){
