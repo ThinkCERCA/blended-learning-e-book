@@ -8,7 +8,7 @@ $light-accent-2: #a0d597; /* light green */
 $light-accent-3: #83dadd; /* light teal */
 $base-color: #00b7bd; /* teal */
 $dark-accent-0: #2f939c; /* dark teal */
-$dark-accent-1: #444d54; /* base-gray and gray-7 */
+$dark-accent-1: #444d54; /* gray-7 */
 
 /* Text properties */
 $base-gray: #2d3338; /* gray-8 */
@@ -787,8 +787,20 @@ h1.cover-box-title-headline,
 }
 
 .cover-box-title-presented {
-  color: $light-accent-2;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   margin: 10px 0 10px 0;
+  overflow: auto;
+  h5 {
+    color: $dark-accent-1;
+    letter-spacing: none;
+  }
+  img {
+    height: 14px;
+    margin-left: 5px; 
+    width: auto;
+  }
 }
 
 .cover-box-title-authors {

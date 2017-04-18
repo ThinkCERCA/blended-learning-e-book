@@ -7,7 +7,7 @@
 /* light teal */
 /* teal */
 /* dark teal */
-/* base-gray and gray-7 */
+/* gray-7 */
 /* Text properties */
 /* gray-8 */
 /* Grays from lightest (0) to darkest (9) */
@@ -626,8 +626,18 @@ h1.cover-box-title-headline,
   width: 80%; }
 
 .cover-box-title-presented {
-  color: #a0d597;
-  margin: 10px 0 10px 0; }
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+  overflow: auto; }
+  .cover-box-title-presented h5 {
+    color: #444d54;
+    letter-spacing: none; }
+  .cover-box-title-presented img {
+    height: 14px;
+    margin-left: 5px;
+    width: auto; }
 
 .cover-box-title-authors {
   color: #a0d597;
