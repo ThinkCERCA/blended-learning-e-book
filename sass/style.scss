@@ -33,13 +33,27 @@ html body a:visited {
   text-decoration: none;
 }
 
+html body h4>a,
+html body a>h4 {
+  color: $base-color;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+html body h4>a:hover,
+html body a>h4:hover {
+  color: $dark-accent-0;
+} 
+
 body {
   overflow: auto;
 }
 
 html body a:hover,
 .section-row-cta a i:hover,
-.section-row-cta i a:hover {
+.section-row-cta i a:hover,
+html body h4>a:hover,
+html body a>h4:hover {
   color: $dark-accent-0;
   text-decoration: none;
 }
@@ -520,15 +534,25 @@ progress::-moz-progress-bar {
   }
   img {
     width: 100%;
-    margin: 10px 0 20px 0;
+    margin: 10px 0 10px 0;
   }
   i {
     color: $base-color;
+    line-height: initial;
+    margin-left: 5px;
+    vertical-align: text-top;
   }
-  p {
-    font-size: 15px;
+  p i {
+    font-size: 18px;
+  }
+  h4 i {
+    font-size: 20px;
+  }
+  p,
+  p:first-of-type {
+    font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 20px;
     margin: 10px 0 10px 0;
   }
 }
@@ -848,7 +872,7 @@ h1.cover-box-title-headline,
   margin: 10px 20px 10px 20px;
 }
 
-.about-social-share.email {
+.about-social-share.email-share-button {
   align-items: center;
   background-color: $base-color;
   border-radius: 3px;
@@ -871,7 +895,7 @@ h1.cover-box-title-headline,
   text-decoration: none;
 }
 
-.about-social-share.email:hover {
+.about-social-share.email-share-button:hover {
   background-color: $dark-accent-0;
 }
 

@@ -1,8 +1,8 @@
-<footer>
+<footer id="authors">
 	{# FB pixel code added to footer per Hubspot's recommendation #}
 	{# (suggestes pixel interferes with Hubspot tracking #}
 	{{ facebook_pixel_code|process_text }}
-	<div class="authors" id="authors">
+	<div class="authors">
 		<div class="authors-hed">
 			<h2>About the Authors</h2>
 		</div>
@@ -12,9 +12,9 @@
 				<img src="{{ author.image }}">
 			</div>
 			<div class="authors-about-text">
-				<h3>{{ author.name }}</h3>
-				<h4>{{ author.title }}</h4>
-				<p>{{ author.bio }}</p>
+				<h3>{{ author.name|process_text }}</h3>
+				<h4>{{ author.title|process_text }}</h4>
+				<p>{{ author.bio|process_text }}</p>
 			</div>
 		</div>
 		{% endfor %}

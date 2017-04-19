@@ -20,12 +20,24 @@ html body a:visited {
   font-weight: 600;
   text-decoration: none; }
 
+html body h4 > a,
+html body a > h4 {
+  color: #00b7bd;
+  font-weight: 500;
+  text-decoration: none; }
+
+html body h4 > a:hover,
+html body a > h4:hover {
+  color: #2f939c; }
+
 body {
   overflow: auto; }
 
 html body a:hover,
 .section-row-cta a i:hover,
-.section-row-cta i a:hover {
+.section-row-cta i a:hover,
+html body h4 > a:hover,
+html body a > h4:hover {
   color: #2f939c;
   text-decoration: none; }
 
@@ -419,13 +431,21 @@ progress::-moz-progress-bar {
   transition: all ease-in-out 0.4s; }
   .section-row-cta img {
     width: 100%;
-    margin: 10px 0 20px 0; }
+    margin: 10px 0 10px 0; }
   .section-row-cta i {
-    color: #00b7bd; }
-  .section-row-cta p {
-    font-size: 15px;
+    color: #00b7bd;
+    line-height: initial;
+    margin-left: 5px;
+    vertical-align: text-top; }
+  .section-row-cta p i {
+    font-size: 18px; }
+  .section-row-cta h4 i {
+    font-size: 20px; }
+  .section-row-cta p,
+  .section-row-cta p:first-of-type {
+    font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 20px;
     margin: 10px 0 10px 0; }
 
 a.section-row-cta:hover,
@@ -676,7 +696,7 @@ h1.cover-box-title-headline,
 .twitter-share-button {
   margin: 10px 20px 10px 20px; }
 
-.about-social-share.email {
+.about-social-share.email-share-button {
   align-items: center;
   background-color: #00b7bd;
   border-radius: 3px;
@@ -685,17 +705,17 @@ h1.cover-box-title-headline,
   font-weight: 500;
   justify-content: center;
   padding: 5px 10px 5px 10px; }
-  .about-social-share.email i.material-icons {
+  .about-social-share.email-share-button i.material-icons {
     font-size: 15px;
     margin-right: 5px; }
-  .about-social-share.email span {
+  .about-social-share.email-share-button span {
     font-size: 13px; }
 
 .about-social-share:focus {
   outline: none;
   text-decoration: none; }
 
-.about-social-share.email:hover {
+.about-social-share.email-share-button:hover {
   background-color: #2f939c; }
 
 @media (max-width: 767px) {
