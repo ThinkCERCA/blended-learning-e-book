@@ -27,8 +27,11 @@
   <meta property="og:url" content="http://{{ ROOT_URL }}/{% if PATH != 'index.html' %}{{ PATH }}{% endif %}" />
   <meta property="og:title" content="{{ title }}" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="{{ opengraph_image }}" />
+  <meta property="og:image" content="{{ ROOT_URL }}{{ opengraph_image }}" />
   <meta property="og:description" content="{{ opengraph_description }}" />
+  <meta property="twitter:description" content="Key strategies that set every school and district on a path to success" />
+  <meta property="twitter:site" content="{{ brand_twitter }}" />
+  <meta property="twitter:image" content="{{ ROOT_URL }}{{ opengraph_image }}" />
   {% endblock opengraph %}
 
   {% block meta %}
