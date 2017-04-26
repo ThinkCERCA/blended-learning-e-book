@@ -550,7 +550,7 @@ html body .cta-webinar {
     color: #ffffff; }
   html body .cta-webinar h5 {
     letter-spacing: 3px; }
-  html body .cta-webinar h2, html body .cta-webinar p {
+  html body .cta-webinar h2, html body .cta-webinar p, html body .cta-webinar p:first-of-type {
     margin: 30px 0 30px 0; }
   html body .cta-webinar .cta-across-text {
     padding: 20px 0 20px 0; }
